@@ -1066,8 +1066,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-05-28T02:20:19.279561",
-        "last_activity": "2025-06-19T20:15:52.544328",
-        "message_count": 198511,
+        "last_activity": "2025-06-19T20:26:19.908323",
+        "message_count": 198571,
         "message_id": null,
         "is_recurring": true
     },
@@ -2158,10 +2158,10 @@
         ],
         "delay_seconds": 400,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-16T22:58:06.243813",
-        "last_activity": "2025-06-19T20:13:58.957241",
-        "message_count": 1078,
+        "last_activity": "2025-06-19T20:24:22.949792",
+        "message_count": 1079,
         "message_id": null,
         "is_recurring": true
     },
@@ -2354,8 +2354,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-19T12:39:51.455892",
-        "last_activity": "2025-06-19T20:09:45.773931",
-        "message_count": 47,
+        "last_activity": "2025-06-19T20:19:46.185739",
+        "message_count": 48,
         "message_id": null,
         "is_recurring": true
     },
@@ -2373,6 +2373,26 @@
         "start_time": "2025-06-19T16:10:23.950518",
         "last_activity": "2025-06-19T16:20:29.078606",
         "message_count": 20,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "6888815221_1750364712.7045794": {
+        "user_id": 6888815221,
+        "post_id": "1750364712.704565",
+        "message": "متوفر نتفلكس رسمي حساب كامل ب ايميلك",
+        "group_ids": [
+            "-1001599134989",
+            "-1002154178869",
+            "-1002449835484",
+            "-1001894777304",
+            "-1002138613548"
+        ],
+        "delay_seconds": 400,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-19T20:25:12.704583",
+        "last_activity": "2025-06-19T20:25:13.600732",
+        "message_count": 1,
         "message_id": null,
         "is_recurring": true
     }
