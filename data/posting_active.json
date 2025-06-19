@@ -1066,8 +1066,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-05-28T02:20:19.279561",
-        "last_activity": "2025-06-19T11:14:03.934357",
-        "message_count": 195391,
+        "last_activity": "2025-06-19T11:24:30.522780",
+        "message_count": 195451,
         "message_id": null,
         "is_recurring": true
     },
@@ -2160,8 +2160,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-16T22:58:06.243813",
-        "last_activity": "2025-06-19T11:13:54.113123",
-        "message_count": 997,
+        "last_activity": "2025-06-19T11:20:35.657391",
+        "message_count": 998,
         "message_id": null,
         "is_recurring": true
     },
@@ -2274,8 +2274,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-18T08:38:26.074115",
-        "last_activity": "2025-06-19T11:13:54.254768",
-        "message_count": 573,
+        "last_activity": "2025-06-19T11:25:56.360817",
+        "message_count": 579,
         "message_id": null,
         "is_recurring": true
     },
@@ -2323,6 +2323,22 @@
         "status": "stopped",
         "start_time": "2025-06-19T11:14:47.691116",
         "last_activity": "2025-06-19T11:14:55.524411",
+        "message_count": 0,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "6459577996_1750331797.8734355": {
+        "user_id": 6459577996,
+        "post_id": "1750331797.8734272",
+        "message": "🤖 *بوت نشر تلقائي*  \nتبي تجربه شوف بايو\n\n📦 المتوفر:\n🎬 نتفلكس  \n📺 OSn\n   \nألعاب ستيم\n \nمتوفر كردت ديس\n \n🍥 كرانشي رول\n  \n📱 متوفر TOD",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 400,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-19T11:16:37.873438",
+        "last_activity": "2025-06-19T11:16:37.873438",
         "message_count": 0,
         "message_id": null,
         "is_recurring": true
