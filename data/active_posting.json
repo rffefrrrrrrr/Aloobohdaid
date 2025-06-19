@@ -1066,8 +1066,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-05-28T02:20:19.279561",
-        "last_activity": "2025-06-19T22:31:59.236755",
-        "message_count": 199291,
+        "last_activity": "2025-06-19T22:42:25.136875",
+        "message_count": 199351,
         "message_id": null,
         "is_recurring": true
     },
@@ -2354,8 +2354,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-19T12:39:51.455892",
-        "last_activity": "2025-06-19T22:31:24.657742",
-        "message_count": 61,
+        "last_activity": "2025-06-19T22:41:25.003452",
+        "message_count": 62,
         "message_id": null,
         "is_recurring": true
     },
@@ -2393,6 +2393,25 @@
         "start_time": "2025-06-19T20:25:12.704583",
         "last_activity": "2025-06-19T21:30:12.533760",
         "message_count": 11,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "6888815221_1750372662.3117757": {
+        "user_id": 6888815221,
+        "post_id": "1750372662.3117623",
+        "message": "متوفر نتفلكس رسمي حساب كامل ب ايميلك",
+        "group_ids": [
+            "-1001599134989",
+            "-1002474833497",
+            "-1002462970203",
+            "-1001894777304"
+        ],
+        "delay_seconds": 200,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-19T22:37:42.311779",
+        "last_activity": "2025-06-19T22:44:25.871841",
+        "message_count": 8,
         "message_id": null,
         "is_recurring": true
     }
