@@ -1,1 +1,19 @@
-{}
+{
+    "2006323734_1750441635.4549897": {
+        "user_id": 2006323734,
+        "post_id": "1750441635.4549701",
+        "message": "متوفر \nاشتراك سناب بلس \n(اهداء)\n3اشهر \nللبيع\n———————————-\n\n———————————-\nاضغط على صورتي",
+        "group_ids": [
+            "-1002233350513",
+            "-1002419365503"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-06-20T17:47:15.454993",
+        "last_activity": "2025-06-20T17:47:16.579877",
+        "message_count": 2,
+        "message_id": null,
+        "is_recurring": false
+    }
+}
