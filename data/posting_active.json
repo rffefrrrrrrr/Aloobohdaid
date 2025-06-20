@@ -28,8 +28,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T18:23:26.699708",
-        "last_activity": "2025-06-20T21:38:58.697573",
-        "message_count": 50,
+        "last_activity": "2025-06-20T21:47:19.493081",
+        "message_count": 52,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "6459577996_1750456273.0098588": {
+        "user_id": 6459577996,
+        "post_id": "1750456273.0098433",
+        "message": "🤖 *بوت نشر تلقائي*  \nتبي تجربه شوف بايو\n\n📦 المتوفر:\n🎬 نتفلكس  ملف او تفعيل علي ايميلك\n\n\n📺 OSN\nملف او تفعيل",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 300,
+        "exact_time": null,
+        "status": "stopped",
+        "start_time": "2025-06-20T21:51:13.009863",
+        "last_activity": "2025-06-20T21:51:46.256587",
+        "message_count": 1,
         "message_id": null,
         "is_recurring": true
     }
