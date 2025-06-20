@@ -965,3 +965,17 @@ class PostingService:
             else:
                 all_tasks_copy = {tid: tdata.copy() for tid, tdata in self.active_tasks.items()}
                 return list(all_tasks_copy.values()) # إرجاع قائمة من قواميس بيانات جميع المهام
+
+
+    def clear_all_tasks_permanently(self):
+        """مسح جميع المهام النشطة بشكل دائم."""
+        with self.tasks_lock:
+            self.active_tasks = {}
+            self.task_threads = {}
+            self.task_events = {}
+            self.user_threads = {}
+        self.save_active_tasks()
+        logger.info("تم مسح جميع المهام النشطة بشكل دائم.")
+        return True, "تم مسح جميع المهام النشطة بنجاح."
+
+
