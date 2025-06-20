@@ -1066,8 +1066,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-05-28T02:20:19.279561",
-        "last_activity": "2025-06-20T14:10:15.839706",
-        "message_count": 204740,
+        "last_activity": "2025-06-20T14:06:46.743989",
+        "message_count": 204720,
         "message_id": null,
         "is_recurring": true
     },
