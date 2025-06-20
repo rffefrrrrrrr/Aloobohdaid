@@ -28,8 +28,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T18:23:26.699708",
-        "last_activity": "2025-06-20T23:10:44.899503",
-        "message_count": 72,
+        "last_activity": "2025-06-20T23:19:05.498161",
+        "message_count": 74,
         "message_id": null,
         "is_recurring": true
     },
@@ -58,9 +58,9 @@
         ],
         "delay_seconds": 300,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-20T21:51:58.022390",
-        "last_activity": "2025-06-20T23:07:04.431432",
+        "last_activity": "2025-06-20T23:11:14.537580",
         "message_count": 16,
         "message_id": null,
         "is_recurring": true
@@ -76,8 +76,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T22:05:52.292124",
-        "last_activity": "2025-06-20T23:09:19.505424",
-        "message_count": 20,
+        "last_activity": "2025-06-20T23:19:20.478537",
+        "message_count": 23,
         "message_id": null,
         "is_recurring": true
     },
@@ -92,8 +92,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T22:16:30.491859",
-        "last_activity": "2025-06-20T23:06:35.600296",
-        "message_count": 11,
+        "last_activity": "2025-06-20T23:21:36.588400",
+        "message_count": 14,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "6459577996_1750461246.9844565": {
+        "user_id": 6459577996,
+        "post_id": "1750461246.9844453",
+        "message": "📦 المتوفر توريد :\n🎬 نتفلكس | netflix\n\n OSN | اوسن 📺\n\n📺 امازون برايم\n\n🎑 يوتوب دعوات او فميلي\n\nتوريد يكون ملفات او تفعيلات علي حسابك\n\n\n🤖 *بوت نشر تلقائي*  \nتبي تجربه شوف بايو",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 300,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-20T23:14:06.984460",
+        "last_activity": "2025-06-20T23:19:08.039168",
+        "message_count": 2,
         "message_id": null,
         "is_recurring": true
     }
