@@ -15,5 +15,22 @@
         "message_count": 2,
         "message_id": null,
         "is_recurring": false
+    },
+    "2006323734_1750443806.6997046": {
+        "user_id": 2006323734,
+        "post_id": "1750443806.6996927",
+        "message": "متوفر \nاشتراك سناب بلس \n(اهداء)\n3اشهر \n3اشهر \nللبيع\n———————————-\n\n———————————-\nاضغط على صورتي",
+        "group_ids": [
+            "-1002233350513",
+            "-1002419365503"
+        ],
+        "delay_seconds": 500,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-20T18:23:26.699708",
+        "last_activity": "2025-06-20T18:23:27.825411",
+        "message_count": 2,
+        "message_id": null,
+        "is_recurring": true
     }
 }
