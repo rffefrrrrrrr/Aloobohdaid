@@ -160,8 +160,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T09:23:32.815228",
-        "last_activity": "2025-06-21T19:59:15.510118",
-        "message_count": 128,
+        "last_activity": "2025-06-21T20:14:16.492639",
+        "message_count": 131,
         "message_id": null,
         "is_recurring": true
     },
@@ -604,8 +604,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T19:09:13.503797",
-        "last_activity": "2025-06-21T20:03:24.274785",
-        "message_count": 28,
+        "last_activity": "2025-06-21T20:15:26.679966",
+        "message_count": 34,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "7234122425_1750536862.5874896": {
+        "user_id": 7234122425,
+        "post_id": "1750536862.5874782",
+        "message": "https://t.me/g_z_p/s/101\n\nلايك ضروري 🌠🤍 .",
+        "group_ids": [
+            "-1002431250947"
+        ],
+        "delay_seconds": 250,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-21T20:14:22.587493",
+        "last_activity": "2025-06-21T20:14:23.477852",
+        "message_count": 1,
         "message_id": null,
         "is_recurring": true
     }
