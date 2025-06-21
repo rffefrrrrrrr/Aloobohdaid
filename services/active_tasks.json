@@ -76,8 +76,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T22:05:52.292124",
-        "last_activity": "2025-06-21T17:22:28.638183",
-        "message_count": 281,
+        "last_activity": "2025-06-21T17:32:29.729153",
+        "message_count": 284,
         "message_id": null,
         "is_recurring": true
     },
@@ -92,8 +92,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T22:16:30.491859",
-        "last_activity": "2025-06-21T17:18:51.903830",
-        "message_count": 229,
+        "last_activity": "2025-06-21T17:33:52.953721",
+        "message_count": 232,
         "message_id": null,
         "is_recurring": true
     },
@@ -160,8 +160,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T09:23:32.815228",
-        "last_activity": "2025-06-21T17:19:04.127958",
-        "message_count": 96,
+        "last_activity": "2025-06-21T17:34:05.120106",
+        "message_count": 99,
         "message_id": null,
         "is_recurring": true
     },
@@ -531,6 +531,35 @@
         "start_time": "2025-06-21T13:19:09.381051",
         "last_activity": "2025-06-21T13:19:17.070343",
         "message_count": 14,
+        "message_id": null,
+        "is_recurring": false
+    },
+    "2006323734_1750526747.5108457": {
+        "user_id": 2006323734,
+        "post_id": "1750526747.5108337",
+        "message": "مطلوب شريحة هولايف \nبسعر ممتاز",
+        "group_ids": [
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002691513610",
+            "-1002616695744",
+            "-1002862095331",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-06-21T17:25:47.510850",
+        "last_activity": "2025-06-21T17:25:53.886268",
+        "message_count": 13,
         "message_id": null,
         "is_recurring": false
     }
