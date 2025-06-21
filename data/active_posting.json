@@ -74,9 +74,9 @@
         ],
         "delay_seconds": 200,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-20T22:05:52.292124",
-        "last_activity": "2025-06-21T19:05:59.581327",
+        "last_activity": "2025-06-21T19:08:23.437987",
         "message_count": 312,
         "message_id": null,
         "is_recurring": true
@@ -160,8 +160,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T09:23:32.815228",
-        "last_activity": "2025-06-21T19:04:11.668350",
-        "message_count": 117,
+        "last_activity": "2025-06-21T19:14:12.421803",
+        "message_count": 119,
         "message_id": null,
         "is_recurring": true
     },
@@ -592,5 +592,21 @@
         "message_count": 14,
         "message_id": null,
         "is_recurring": false
+    },
+    "2079821973_1750532953.5037932": {
+        "user_id": 2079821973,
+        "post_id": "1750532953.5037796",
+        "message": "https://t.me/immm7/s/2\n\nلايك فقط ضروري 🌠🤍 .",
+        "group_ids": [
+            "-1002072280303"
+        ],
+        "delay_seconds": 120,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-21T19:09:13.503797",
+        "last_activity": "2025-06-21T19:17:15.905325",
+        "message_count": 5,
+        "message_id": null,
+        "is_recurring": true
     }
 }
