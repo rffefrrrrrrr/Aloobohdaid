@@ -76,8 +76,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T22:05:52.292124",
-        "last_activity": "2025-06-21T09:18:18.153818",
-        "message_count": 136,
+        "last_activity": "2025-06-21T09:28:19.069143",
+        "message_count": 139,
         "message_id": null,
         "is_recurring": true
     },
@@ -92,8 +92,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T22:16:30.491859",
-        "last_activity": "2025-06-21T09:18:18.014001",
-        "message_count": 133,
+        "last_activity": "2025-06-21T09:28:18.591962",
+        "message_count": 135,
         "message_id": null,
         "is_recurring": true
     },
@@ -148,5 +148,21 @@
         "message_count": 19,
         "message_id": null,
         "is_recurring": false
+    },
+    "7776621643_1750497812.8152242": {
+        "user_id": 7776621643,
+        "post_id": "1750497812.815209",
+        "message": "📦 المتوفر توريد :\n🎬 نتفلكس | netflix\n\n OSN | اوسن 📺\n\n📺 امازون برايم\n\n🎑 يوتوب دعوات او فميلي\n\nتوريد يكون ملفات او تفعيلات علي حسابك\n\n\n🤖 *بوت نشر تلقائي*  \nتبي تجربه شوف بايو",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 300,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-21T09:23:32.815228",
+        "last_activity": "2025-06-21T09:28:33.646782",
+        "message_count": 2,
+        "message_id": null,
+        "is_recurring": true
     }
 }
