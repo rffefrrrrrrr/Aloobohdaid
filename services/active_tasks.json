@@ -26,9 +26,9 @@
         ],
         "delay_seconds": 500,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-20T18:23:26.699708",
-        "last_activity": "2025-06-21T08:37:59.974821",
+        "last_activity": "2025-06-21T08:42:32.312628",
         "message_count": 208,
         "message_id": null,
         "is_recurring": true
@@ -76,8 +76,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T22:05:52.292124",
-        "last_activity": "2025-06-21T08:36:45.639277",
-        "message_count": 124,
+        "last_activity": "2025-06-21T08:50:07.127662",
+        "message_count": 128,
         "message_id": null,
         "is_recurring": true
     },
@@ -92,8 +92,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T22:16:30.491859",
-        "last_activity": "2025-06-21T08:37:11.343233",
-        "message_count": 125,
+        "last_activity": "2025-06-21T08:47:12.309650",
+        "message_count": 127,
         "message_id": null,
         "is_recurring": true
     },
@@ -108,8 +108,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-20T23:14:06.984460",
-        "last_activity": "2025-06-21T08:34:42.775360",
-        "message_count": 113,
+        "last_activity": "2025-06-21T08:49:43.671108",
+        "message_count": 116,
         "message_id": null,
         "is_recurring": true
     }
