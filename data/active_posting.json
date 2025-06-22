@@ -620,8 +620,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T20:14:22.587493",
-        "last_activity": "2025-06-22T13:58:16.458600",
-        "message_count": 256,
+        "last_activity": "2025-06-22T14:10:47.499361",
+        "message_count": 259,
         "message_id": null,
         "is_recurring": true
     },
@@ -636,8 +636,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T22:11:34.225480",
-        "last_activity": "2025-06-22T14:01:23.328136",
-        "message_count": 473,
+        "last_activity": "2025-06-22T14:11:24.868608",
+        "message_count": 478,
         "message_id": null,
         "is_recurring": true
     },
@@ -755,6 +755,35 @@
         "start_time": "2025-06-22T12:16:26.576990",
         "last_activity": "2025-06-22T12:16:30.840382",
         "message_count": 9,
+        "message_id": null,
+        "is_recurring": false
+    },
+    "2006323734_1750601327.857231": {
+        "user_id": 2006323734,
+        "post_id": "1750601327.8572214",
+        "message": "متوفر شريحة موبايلي لامحدود\nضمان كامل المدة \nالسعر خاص\nاضغط على صورتي",
+        "group_ids": [
+            "-1002674067180",
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002302728986",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-06-22T14:08:47.857234",
+        "last_activity": "2025-06-22T14:08:53.685078",
+        "message_count": 13,
         "message_id": null,
         "is_recurring": false
     }
