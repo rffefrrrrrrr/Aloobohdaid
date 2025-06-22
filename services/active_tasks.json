@@ -158,9 +158,9 @@
         ],
         "delay_seconds": 300,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-21T09:23:32.815228",
-        "last_activity": "2025-06-22T10:59:37.431455",
+        "last_activity": "2025-06-22T18:51:41.016072",
         "message_count": 266,
         "message_id": null,
         "is_recurring": true
@@ -620,8 +620,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T20:14:22.587493",
-        "last_activity": "2025-06-22T18:46:11.473609",
-        "message_count": 325,
+        "last_activity": "2025-06-22T18:58:42.595124",
+        "message_count": 328,
         "message_id": null,
         "is_recurring": true
     },
@@ -636,8 +636,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T22:11:34.225480",
-        "last_activity": "2025-06-22T18:48:15.543722",
-        "message_count": 616,
+        "last_activity": "2025-06-22T19:00:17.787625",
+        "message_count": 622,
         "message_id": null,
         "is_recurring": true
     },
@@ -786,5 +786,37 @@
         "message_count": 13,
         "message_id": null,
         "is_recurring": false
+    },
+    "7776621643_1750618342.9087496": {
+        "user_id": 7776621643,
+        "post_id": "1750618342.9087408",
+        "message": "📦 المتوفر توريد :\n🎬 نتفلكس | netflix\n\n OSN | اوسن 📺\n\n📺 امازون برايم\n\n🎑 يوتوب دعوات او فميلي\n\nتوريد يكون ملفات او تفعيلات علي حسابك\n\n\n🤖 *بوت نشر تلقائي*  \nتبي تجربه شوف بايو",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 500,
+        "exact_time": null,
+        "status": "failed",
+        "start_time": "2025-06-22T18:52:22.908753",
+        "last_activity": "2025-06-22T18:52:23.068148",
+        "message_count": 0,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "7776621643_1750618385.7965217": {
+        "user_id": 7776621643,
+        "post_id": "1750618385.7965138",
+        "message": "📦 المتوفر توريد :\n🎬 نتفلكس | netflix\n\n OSN | اوسن 📺\n\n📺 امازون برايم\n\n🎑 يوتوب دعوات او فميلي\n\nتوريد يكون ملفات او تفعيلات علي حسابك\n\n\n🤖 *بوت نشر تلقائي*  \nتبي تجربه شوف بايو",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 500,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-22T18:53:05.796525",
+        "last_activity": "2025-06-22T18:53:06.362135",
+        "message_count": 1,
+        "message_id": null,
+        "is_recurring": true
     }
 }
