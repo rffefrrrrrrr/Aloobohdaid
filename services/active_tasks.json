@@ -620,8 +620,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T20:14:22.587493",
-        "last_activity": "2025-06-23T23:26:22.668451",
-        "message_count": 736,
+        "last_activity": "2025-06-23T23:38:53.737037",
+        "message_count": 739,
         "message_id": null,
         "is_recurring": true
     },
@@ -652,8 +652,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T01:28:29.829156",
-        "last_activity": "2025-06-23T23:26:20.960784",
-        "message_count": 75,
+        "last_activity": "2025-06-23T23:36:21.669568",
+        "message_count": 77,
         "message_id": null,
         "is_recurring": true
     },
@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-23T23:26:16.376595",
-        "message_count": 205,
+        "last_activity": "2025-06-23T23:34:36.745452",
+        "message_count": 206,
         "message_id": null,
         "is_recurring": true
     },
@@ -828,10 +828,26 @@
         ],
         "delay_seconds": 120,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-23T02:16:05.268604",
-        "last_activity": "2025-06-23T23:27:35.537323",
-        "message_count": 635,
+        "last_activity": "2025-06-23T23:37:58.108241",
+        "message_count": 640,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "2079821973_1750721899.4112983": {
+        "user_id": 2079821973,
+        "post_id": "1750721899.4112833",
+        "message": "https://t.me/immm7/1597\n\nتفاعلات مختلفه 🌠🤍 .",
+        "group_ids": [
+            "-1002072280303"
+        ],
+        "delay_seconds": 120,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-23T23:38:19.411302",
+        "last_activity": "2025-06-23T23:38:20.398428",
+        "message_count": 1,
         "message_id": null,
         "is_recurring": true
     }
