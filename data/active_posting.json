@@ -620,8 +620,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-21T20:14:22.587493",
-        "last_activity": "2025-06-24T17:52:07.060941",
-        "message_count": 997,
+        "last_activity": "2025-06-24T18:04:38.256379",
+        "message_count": 1000,
         "message_id": null,
         "is_recurring": true
     },
@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-24T17:52:15.949477",
-        "message_count": 338,
+        "last_activity": "2025-06-24T18:00:36.302516",
+        "message_count": 339,
         "message_id": null,
         "is_recurring": true
     },
@@ -846,9 +846,38 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-23T23:38:19.411302",
-        "last_activity": "2025-06-24T17:54:41.792061",
-        "message_count": 547,
+        "last_activity": "2025-06-24T18:06:44.479506",
+        "message_count": 553,
         "message_id": null,
         "is_recurring": true
+    },
+    "2006323734_1750788121.2404006": {
+        "user_id": 2006323734,
+        "post_id": "1750788121.240375",
+        "message": "متوفر شريحة موبايلي لامحدود\nضمان كامل المدة \nالسعر خاص\nاضغط على صورتي",
+        "group_ids": [
+            "-1002674067180",
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002302728986",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-06-24T18:02:01.240405",
+        "last_activity": "2025-06-24T18:02:07.893295",
+        "message_count": 13,
+        "message_id": null,
+        "is_recurring": false
     }
 }
