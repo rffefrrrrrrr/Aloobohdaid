@@ -846,8 +846,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-23T23:38:19.411302",
-        "last_activity": "2025-06-25T21:38:37.602162",
-        "message_count": 1374,
+        "last_activity": "2025-06-25T21:50:40.265400",
+        "message_count": 1380,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-25T21:39:17.607014",
-        "message_count": 8761,
+        "last_activity": "2025-06-25T21:49:46.596853",
+        "message_count": 8821,
         "message_id": null,
         "is_recurring": true
     },
@@ -1047,8 +1047,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-25T20:15:04.210235",
-        "last_activity": "2025-06-25T21:36:56.534712",
-        "message_count": 11,
+        "last_activity": "2025-06-25T21:45:17.038346",
+        "message_count": 12,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "1369504903_1750887805.341827": {
+        "user_id": 1369504903,
+        "post_id": "1750887805.3418138",
+        "message": "ملكيه \n- 𝖴𝗌𝖾𝗋 : C_G_U =وصل 29\n- 𝖴𝗌𝖾𝗋 : DPPP7 = 4$\n\nمطلوب يوزر تلي ثلاثي ملكيه",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 200,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-25T21:43:25.341830",
+        "last_activity": "2025-06-25T21:50:06.557821",
+        "message_count": 3,
         "message_id": null,
         "is_recurring": true
     }
