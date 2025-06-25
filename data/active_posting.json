@@ -846,8 +846,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-23T23:38:19.411302",
-        "last_activity": "2025-06-25T11:57:14.049852",
-        "message_count": 1085,
+        "last_activity": "2025-06-25T12:09:16.475372",
+        "message_count": 1091,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-25T11:57:23.382340",
-        "message_count": 5441,
+        "last_activity": "2025-06-25T12:07:53.871104",
+        "message_count": 5501,
         "message_id": null,
         "is_recurring": true
     },
@@ -935,8 +935,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T23:36:53.971481",
-        "last_activity": "2025-06-25T11:56:55.289750",
-        "message_count": 149,
+        "last_activity": "2025-06-25T12:06:56.066606",
+        "message_count": 151,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "1369504903_1750852695.9353251": {
+        "user_id": 1369504903,
+        "post_id": "1750852695.9353082",
+        "message": "ملكيه \n- 𝖴𝗌𝖾𝗋 : C_G_U =وصل 28\n- 𝖴𝗌𝖾𝗋 : D_0_C =وصل 25\n- 𝖴𝗌𝖾𝗋 : m_r_3 =23$\n- 𝖴𝗌𝖾𝗋 : DPPP7 = omm?",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 240,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-25T11:58:15.935328",
+        "last_activity": "2025-06-25T12:06:17.258492",
+        "message_count": 3,
         "message_id": null,
         "is_recurring": true
     }
