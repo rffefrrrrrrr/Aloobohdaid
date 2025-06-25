@@ -846,8 +846,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-23T23:38:19.411302",
-        "last_activity": "2025-06-25T22:56:52.478875",
-        "message_count": 1413,
+        "last_activity": "2025-06-25T23:08:54.454813",
+        "message_count": 1419,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-25T22:56:06.365326",
-        "message_count": 9201,
+        "last_activity": "2025-06-25T23:06:33.780293",
+        "message_count": 9261,
         "message_id": null,
         "is_recurring": true
     },
@@ -1047,8 +1047,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-25T20:15:04.210235",
-        "last_activity": "2025-06-25T22:52:00.391457",
-        "message_count": 20,
+        "last_activity": "2025-06-25T23:08:41.139374",
+        "message_count": 22,
         "message_id": null,
         "is_recurring": true
     },
@@ -1061,10 +1061,26 @@
         ],
         "delay_seconds": 200,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-25T21:43:25.341830",
-        "last_activity": "2025-06-25T22:56:53.402125",
-        "message_count": 23,
+        "last_activity": "2025-06-25T23:01:46.443076",
+        "message_count": 24,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "1369504903_1750892550.0081625": {
+        "user_id": 1369504903,
+        "post_id": "1750892550.0081313",
+        "message": "ملكيه \n- 𝖴𝗌𝖾𝗋 : C_G_U =وصل 30\n- 𝖴𝗌𝖾𝗋 : DPPP7 = 4$\n\nمطلوب يوزر تلي ثلاثي ملكيه",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 200,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-25T23:02:30.008167",
+        "last_activity": "2025-06-25T23:05:51.378742",
+        "message_count": 2,
         "message_id": null,
         "is_recurring": true
     }
