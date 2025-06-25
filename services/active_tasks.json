@@ -846,8 +846,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-23T23:38:19.411302",
-        "last_activity": "2025-06-25T14:13:41.476430",
-        "message_count": 1153,
+        "last_activity": "2025-06-25T14:25:43.625834",
+        "message_count": 1159,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-25T14:13:55.848604",
-        "message_count": 6221,
+        "last_activity": "2025-06-25T14:24:26.470994",
+        "message_count": 6281,
         "message_id": null,
         "is_recurring": true
     },
@@ -935,8 +935,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T23:36:53.971481",
-        "last_activity": "2025-06-25T14:12:06.994825",
-        "message_count": 176,
+        "last_activity": "2025-06-25T14:27:08.218767",
+        "message_count": 179,
         "message_id": null,
         "is_recurring": true
     },
@@ -967,8 +967,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-25T14:07:30.709339",
-        "last_activity": "2025-06-25T14:07:31.868364",
-        "message_count": 1,
+        "last_activity": "2025-06-25T14:19:12.237298",
+        "message_count": 2,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "1369504903_1750860985.7646875": {
+        "user_id": 1369504903,
+        "post_id": "1750860985.7646763",
+        "message": "ملكيه \n- 𝖴𝗌𝖾𝗋 : C_G_U =وصل 28\n- 𝖴𝗌𝖾𝗋 : D_0_C =وصل 25\n- 𝖴𝗌𝖾𝗋 : DPPP7 = 4$",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 200,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-25T14:16:25.764691",
+        "last_activity": "2025-06-25T14:26:27.505136",
+        "message_count": 4,
         "message_id": null,
         "is_recurring": true
     }
