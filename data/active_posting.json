@@ -846,8 +846,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-23T23:38:19.411302",
-        "last_activity": "2025-06-25T14:25:43.625834",
-        "message_count": 1159,
+        "last_activity": "2025-06-25T14:37:46.178512",
+        "message_count": 1165,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-25T14:24:26.470994",
-        "message_count": 6281,
+        "last_activity": "2025-06-25T14:38:27.244757",
+        "message_count": 6361,
         "message_id": null,
         "is_recurring": true
     },
@@ -935,8 +935,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T23:36:53.971481",
-        "last_activity": "2025-06-25T14:27:08.218767",
-        "message_count": 179,
+        "last_activity": "2025-06-25T14:37:09.031238",
+        "message_count": 181,
         "message_id": null,
         "is_recurring": true
     },
@@ -965,9 +965,9 @@
         ],
         "delay_seconds": 700,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-25T14:07:30.709339",
-        "last_activity": "2025-06-25T14:19:12.237298",
+        "last_activity": "2025-06-25T14:29:13.147023",
         "message_count": 2,
         "message_id": null,
         "is_recurring": true
@@ -983,8 +983,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-25T14:16:25.764691",
-        "last_activity": "2025-06-25T14:26:27.505136",
-        "message_count": 4,
+        "last_activity": "2025-06-25T14:36:28.614660",
+        "message_count": 7,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "6447610618_1750861775.6892025": {
+        "user_id": 6447610618,
+        "post_id": "1750861775.6891947",
+        "message": "‼️ متوفر ‼️\n\n🎬 نتفلكس (ملف / تفعيل / الكميات)\n\n📺 Osn (ملف / تفعيل / كميات)\n\n📦 امازون برايم (ملف / تفعيل)\n\n▶️ يوتوب (دعوة / حسابك فاميليا)\n\n🌟 &-كرانشي رول-&\n\n🎮 ألعاب ستيم أوفلاين",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 700,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-25T14:29:35.689205",
+        "last_activity": "2025-06-25T14:29:36.625332",
+        "message_count": 1,
         "message_id": null,
         "is_recurring": true
     }
