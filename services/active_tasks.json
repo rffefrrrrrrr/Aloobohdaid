@@ -846,8 +846,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-23T23:38:19.411302",
-        "last_activity": "2025-06-25T16:10:04.796024",
-        "message_count": 1211,
+        "last_activity": "2025-06-25T16:22:07.611252",
+        "message_count": 1217,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-25T16:09:30.568034",
-        "message_count": 6881,
+        "last_activity": "2025-06-25T16:20:01.565446",
+        "message_count": 6941,
         "message_id": null,
         "is_recurring": true
     },
@@ -981,9 +981,9 @@
         ],
         "delay_seconds": 200,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-25T14:16:25.764691",
-        "last_activity": "2025-06-25T16:09:58.644258",
+        "last_activity": "2025-06-25T16:13:06.037489",
         "message_count": 35,
         "message_id": null,
         "is_recurring": true
@@ -1015,8 +1015,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-25T15:03:44.435327",
-        "last_activity": "2025-06-25T16:10:29.380603",
-        "message_count": 9,
+        "last_activity": "2025-06-25T16:18:50.016864",
+        "message_count": 10,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "1369504903_1750868036.4694338": {
+        "user_id": 1369504903,
+        "post_id": "1750868036.4694257",
+        "message": "ملكيه \n- 𝖴𝗌𝖾𝗋 : C_G_U =وصل 28\n- 𝖴𝗌𝖾𝗋 : DPPP7 = 4$",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 200,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-25T16:13:56.469436",
+        "last_activity": "2025-06-25T16:20:38.006558",
+        "message_count": 3,
         "message_id": null,
         "is_recurring": true
     }
