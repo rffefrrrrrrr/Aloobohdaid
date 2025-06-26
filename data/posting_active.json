@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-26T19:39:32.348741",
-        "message_count": 492,
+        "last_activity": "2025-06-26T19:47:52.695584",
+        "message_count": 493,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-26T19:40:25.793916",
-        "message_count": 16321,
+        "last_activity": "2025-06-26T19:50:56.639568",
+        "message_count": 16381,
         "message_id": null,
         "is_recurring": true
     },
@@ -1127,8 +1127,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-26T12:53:13.790003",
-        "last_activity": "2025-06-26T19:42:39.465291",
-        "message_count": 205,
+        "last_activity": "2025-06-26T19:52:41.408426",
+        "message_count": 210,
         "message_id": null,
         "is_recurring": true
     },
@@ -1143,8 +1143,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-26T15:37:38.875310",
-        "last_activity": "2025-06-26T19:42:28.093811",
-        "message_count": 123,
+        "last_activity": "2025-06-26T19:52:30.114432",
+        "message_count": 128,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "1369504903_1750967135.0551908": {
+        "user_id": 1369504903,
+        "post_id": "1750967135.055178",
+        "message": "- 𝖴𝗌𝖾𝗋 : dppp7 = 5$\n- 𝖥𝗈𝗋 : 𝖳𝖾𝗅𝖾𝖦𝗋𝖺𝗆 \n- 𝖡𝗒 : zdrdz",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 200,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-26T19:45:35.055210",
+        "last_activity": "2025-06-26T19:52:16.394522",
+        "message_count": 3,
         "message_id": null,
         "is_recurring": true
     }
