@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-26T14:47:39.067493",
-        "message_count": 457,
+        "last_activity": "2025-06-26T15:04:19.896307",
+        "message_count": 459,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-26T14:53:10.824245",
-        "message_count": 14681,
+        "last_activity": "2025-06-26T15:03:41.255246",
+        "message_count": 14741,
         "message_id": null,
         "is_recurring": true
     },
@@ -1093,10 +1093,10 @@
         ],
         "delay_seconds": 200,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-26T10:48:46.309331",
-        "last_activity": "2025-06-26T14:52:32.219861",
-        "message_count": 74,
+        "last_activity": "2025-06-26T15:00:18.235420",
+        "message_count": 76,
         "message_id": null,
         "is_recurring": true
     },
@@ -1111,8 +1111,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-26T12:20:21.224387",
-        "last_activity": "2025-06-26T14:54:52.295486",
-        "message_count": 78,
+        "last_activity": "2025-06-26T15:06:54.907732",
+        "message_count": 84,
         "message_id": null,
         "is_recurring": true
     },
@@ -1127,8 +1127,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-26T12:53:13.790003",
-        "last_activity": "2025-06-26T14:53:39.128682",
-        "message_count": 61,
+        "last_activity": "2025-06-26T15:05:41.528897",
+        "message_count": 67,
         "message_id": null,
         "is_recurring": true
     }
