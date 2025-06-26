@@ -846,8 +846,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-23T23:38:19.411302",
-        "last_activity": "2025-06-26T09:40:52.396576",
-        "message_count": 1733,
+        "last_activity": "2025-06-26T09:52:55.099672",
+        "message_count": 1739,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-26T09:41:30.232077",
-        "message_count": 12901,
+        "last_activity": "2025-06-26T09:51:58.688879",
+        "message_count": 12961,
         "message_id": null,
         "is_recurring": true
     },
