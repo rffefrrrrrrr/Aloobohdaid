@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-27T00:18:35.972782",
-        "message_count": 526,
+        "last_activity": "2025-06-27T00:35:16.553630",
+        "message_count": 528,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-27T00:23:20.167209",
-        "message_count": 17941,
+        "last_activity": "2025-06-27T00:37:18.542275",
+        "message_count": 18021,
         "message_id": null,
         "is_recurring": true
     },
@@ -1127,8 +1127,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-26T12:53:13.790003",
-        "last_activity": "2025-06-27T00:26:21.323111",
-        "message_count": 346,
+        "last_activity": "2025-06-27T00:36:22.940331",
+        "message_count": 351,
         "message_id": null,
         "is_recurring": true
     },
@@ -1141,10 +1141,10 @@
         ],
         "delay_seconds": 120,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-26T15:37:38.875310",
-        "last_activity": "2025-06-27T00:26:21.517104",
-        "message_count": 264,
+        "last_activity": "2025-06-27T00:33:16.942800",
+        "message_count": 267,
         "message_id": null,
         "is_recurring": true
     },
@@ -1161,6 +1161,22 @@
         "start_time": "2025-06-26T19:45:35.055210",
         "last_activity": "2025-06-26T23:52:28.823247",
         "message_count": 75,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "7924814676_1750984434.8838716": {
+        "user_id": 7924814676,
+        "post_id": "1750984434.8838608",
+        "message": "متوفر ارقام تيليجرام",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 40,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-27T00:33:54.883874",
+        "last_activity": "2025-06-27T00:37:57.764347",
+        "message_count": 7,
         "message_id": null,
         "is_recurring": true
     }
