@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-27T00:43:36.909741",
-        "message_count": 529,
+        "last_activity": "2025-06-27T01:00:17.819312",
+        "message_count": 531,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-27T00:47:46.878850",
-        "message_count": 18081,
+        "last_activity": "2025-06-27T01:01:45.605402",
+        "message_count": 18161,
         "message_id": null,
         "is_recurring": true
     },
@@ -1127,8 +1127,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-26T12:53:13.790003",
-        "last_activity": "2025-06-27T00:48:25.381570",
-        "message_count": 357,
+        "last_activity": "2025-06-27T01:00:27.459480",
+        "message_count": 363,
         "message_id": null,
         "is_recurring": true
     },
@@ -1173,10 +1173,26 @@
         ],
         "delay_seconds": 40,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-27T00:33:54.883874",
-        "last_activity": "2025-06-27T00:49:23.507514",
-        "message_count": 24,
+        "last_activity": "2025-06-27T00:53:37.939335",
+        "message_count": 30,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "7924814676_1750985637.128914": {
+        "user_id": 7924814676,
+        "post_id": "1750985637.1289005",
+        "message": "متوفر ارقام تيليجرام",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 120,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-27T00:53:57.128918",
+        "last_activity": "2025-06-27T01:01:59.295876",
+        "message_count": 5,
         "message_id": null,
         "is_recurring": true
     }
