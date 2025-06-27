@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-27T10:15:21.934842",
-        "message_count": 598,
+        "last_activity": "2025-06-27T10:23:42.250297",
+        "message_count": 599,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-27T10:19:20.198969",
-        "message_count": 21361,
+        "last_activity": "2025-06-27T10:29:50.402020",
+        "message_count": 21421,
         "message_id": null,
         "is_recurring": true
     },
@@ -1191,8 +1191,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T00:53:57.128918",
-        "last_activity": "2025-06-27T10:17:49.931255",
-        "message_count": 282,
+        "last_activity": "2025-06-27T10:29:52.582251",
+        "message_count": 288,
         "message_id": null,
         "is_recurring": true
     },
@@ -1207,9 +1207,38 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T09:59:47.512263",
-        "last_activity": "2025-06-27T10:17:52.112486",
-        "message_count": 10,
+        "last_activity": "2025-06-27T10:29:54.931777",
+        "message_count": 16,
         "message_id": null,
         "is_recurring": true
+    },
+    "2006323734_1751019784.1233037": {
+        "user_id": 2006323734,
+        "post_id": "1751019784.1232915",
+        "message": "مطلوب بوت نقل أعضاء بسعر ممتاز\nاضغط على صورتي للتواصل",
+        "group_ids": [
+            "-1002674067180",
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002302728986",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-06-27T10:23:04.123308",
+        "last_activity": "2025-06-27T10:23:11.498177",
+        "message_count": 13,
+        "message_id": null,
+        "is_recurring": false
     }
 }
