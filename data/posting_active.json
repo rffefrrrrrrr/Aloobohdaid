@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-27T12:12:06.668842",
-        "message_count": 612,
+        "last_activity": "2025-06-27T12:20:27.014308",
+        "message_count": 613,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-27T12:11:29.506937",
-        "message_count": 22001,
+        "last_activity": "2025-06-27T12:22:00.694443",
+        "message_count": 22061,
         "message_id": null,
         "is_recurring": true
     },
@@ -1191,8 +1191,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T00:53:57.128918",
-        "last_activity": "2025-06-27T12:12:13.180668",
-        "message_count": 339,
+        "last_activity": "2025-06-27T12:24:15.742745",
+        "message_count": 345,
         "message_id": null,
         "is_recurring": true
     },
@@ -1207,8 +1207,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T09:59:47.512263",
-        "last_activity": "2025-06-27T12:12:17.078101",
-        "message_count": 67,
+        "last_activity": "2025-06-27T12:24:19.324465",
+        "message_count": 73,
         "message_id": null,
         "is_recurring": true
     },
@@ -1383,6 +1383,23 @@
         "start_time": "2025-06-27T11:52:04.919156",
         "last_activity": "2025-06-27T11:52:11.855231",
         "message_count": 11,
+        "message_id": null,
+        "is_recurring": false
+    },
+    "2006323734_1751026455.4958146": {
+        "user_id": 2006323734,
+        "post_id": "1751026455.4957812",
+        "message": "لحق متوفر طريقة نت شريحة اكترونيه زين ✅🛜\n\n(( ابراج زين 🗼)) \n\nيومين لامحدود 48 ساعه 😻🕑\nتقدر تعيد الطريقه اكثر من مرا بنفس الحساب 🌟🔄\nالنت قوي 🏅\nتفعيل فقط ب ( 7.50 ريال ) 🤩✅\n\nابيع الطريقه فقط ب < …….> لحق قبل رفع الاسعار 😍🧑🏻‍💻\nتعال خاص وخذ سعر ممتاز ولا ب الاحلام\nخاص",
+        "group_ids": [
+            "-1002233350513",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-06-27T12:14:15.495820",
+        "last_activity": "2025-06-27T12:14:16.800838",
+        "message_count": 1,
         "message_id": null,
         "is_recurring": false
     }
