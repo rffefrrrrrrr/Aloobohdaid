@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-28T21:57:06.553237",
-        "message_count": 33482,
+        "last_activity": "2025-06-28T22:11:04.305478",
+        "message_count": 33562,
         "message_id": null,
         "is_recurring": true
     },
@@ -1191,8 +1191,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T00:53:57.128918",
-        "last_activity": "2025-06-28T21:58:49.700822",
-        "message_count": 1338,
+        "last_activity": "2025-06-28T22:10:52.293533",
+        "message_count": 1344,
         "message_id": null,
         "is_recurring": true
     },
@@ -1207,8 +1207,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T09:59:47.512263",
-        "last_activity": "2025-06-28T21:58:51.800775",
-        "message_count": 1066,
+        "last_activity": "2025-06-28T22:10:54.499569",
+        "message_count": 1072,
         "message_id": null,
         "is_recurring": true
     },
@@ -1811,5 +1811,51 @@
         "message_count": 11,
         "message_id": null,
         "is_recurring": false
+    },
+    "2006323734_1751148618.5128772": {
+        "user_id": 2006323734,
+        "post_id": "1751148618.512865",
+        "message": "حساب هندي 1100متابع\n\nلايكاات18.0الف\n\nب1،25لتك",
+        "group_ids": [
+            "-1002674067180",
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002302728986",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-06-28T22:10:18.512881",
+        "last_activity": "2025-06-28T22:10:24.748541",
+        "message_count": 11,
+        "message_id": null,
+        "is_recurring": false
+    },
+    "2006323734_1751148710.2054753": {
+        "user_id": 2006323734,
+        "post_id": "1751148710.2054656",
+        "message": "حساب هندي 1100متابع\n\nلايكاات18.0الف\n\nب1،25لتك",
+        "group_ids": [
+            "-1002616695744",
+            "-1002212734419"
+        ],
+        "delay_seconds": 190,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-28T22:11:50.205478",
+        "last_activity": "2025-06-28T22:11:51.503637",
+        "message_count": 1,
+        "message_id": null,
+        "is_recurring": true
     }
 }
