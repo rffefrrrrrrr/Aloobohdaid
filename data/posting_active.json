@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-28T19:19:41.337227",
-        "message_count": 835,
+        "last_activity": "2025-06-28T19:28:01.620233",
+        "message_count": 836,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-28T19:19:18.335960",
-        "message_count": 32582,
+        "last_activity": "2025-06-28T19:29:50.841694",
+        "message_count": 32642,
         "message_id": null,
         "is_recurring": true
     },
@@ -1191,8 +1191,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T00:53:57.128918",
-        "last_activity": "2025-06-28T19:18:17.017944",
-        "message_count": 1258,
+        "last_activity": "2025-06-28T19:30:19.309170",
+        "message_count": 1264,
         "message_id": null,
         "is_recurring": true
     },
@@ -1207,8 +1207,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T09:59:47.512263",
-        "last_activity": "2025-06-28T19:18:18.145233",
-        "message_count": 986,
+        "last_activity": "2025-06-28T19:30:20.650551",
+        "message_count": 992,
         "message_id": null,
         "is_recurring": true
     },
@@ -1695,5 +1695,34 @@
         "message_count": 9,
         "message_id": null,
         "is_recurring": true
+    },
+    "2006323734_1751138930.7975957": {
+        "user_id": 2006323734,
+        "post_id": "1751138930.7975836",
+        "message": "مطلوب مورد تيك توك بأسعار ممتازه",
+        "group_ids": [
+            "-1002674067180",
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002302728986",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-06-28T19:28:50.797598",
+        "last_activity": "2025-06-28T19:28:57.761541",
+        "message_count": 11,
+        "message_id": null,
+        "is_recurring": false
     }
 }
