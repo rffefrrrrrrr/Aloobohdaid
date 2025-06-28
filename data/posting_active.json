@@ -814,8 +814,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-22T18:53:05.796525",
-        "last_activity": "2025-06-28T15:39:28.795785",
-        "message_count": 808,
+        "last_activity": "2025-06-28T15:47:49.126448",
+        "message_count": 809,
         "message_id": null,
         "is_recurring": true
     },
@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-28T15:41:12.834374",
-        "message_count": 31322,
+        "last_activity": "2025-06-28T15:51:41.105340",
+        "message_count": 31382,
         "message_id": null,
         "is_recurring": true
     },
@@ -1191,8 +1191,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T00:53:57.128918",
-        "last_activity": "2025-06-28T15:41:20.937629",
-        "message_count": 1150,
+        "last_activity": "2025-06-28T15:53:23.301061",
+        "message_count": 1156,
         "message_id": null,
         "is_recurring": true
     },
@@ -1207,8 +1207,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-27T09:59:47.512263",
-        "last_activity": "2025-06-28T15:41:20.833701",
-        "message_count": 878,
+        "last_activity": "2025-06-28T15:53:23.332233",
+        "message_count": 884,
         "message_id": null,
         "is_recurring": true
     },
@@ -1679,5 +1679,21 @@
         "message_count": 11,
         "message_id": null,
         "is_recurring": false
+    },
+    "6447610618_1751125368.6961923": {
+        "user_id": 6447610618,
+        "post_id": "1751125368.6961794",
+        "message": "‼️ متوفر ‼️\n\n🎬 نتفلكس (ملف / تفعيل / الكميات)\n\n📺 Osn (ملف / تفعيل / كميات)\n\n📦 امازون برايم (ملف / تفعيل)\n\n▶️ يوتوب (دعوة / حسابك فاميليا)\n\n🌟 &-كرانشي رول-&\n\n🎮 ألعاب ستيم أوفلاين",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 500,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-28T15:42:48.696196",
+        "last_activity": "2025-06-28T15:51:10.294402",
+        "message_count": 2,
+        "message_id": null,
+        "is_recurring": true
     }
 }
