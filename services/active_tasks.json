@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-29T21:45:28.129460",
-        "message_count": 41642,
+        "last_activity": "2025-06-29T21:55:57.806509",
+        "message_count": 41702,
         "message_id": null,
         "is_recurring": true
     },
@@ -1205,10 +1205,10 @@
         ],
         "delay_seconds": 120,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-27T09:59:47.512263",
-        "last_activity": "2025-06-29T21:46:43.820665",
-        "message_count": 1775,
+        "last_activity": "2025-06-29T21:54:51.323253",
+        "message_count": 1779,
         "message_id": null,
         "is_recurring": true
     },
@@ -1938,8 +1938,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T18:19:43.283099",
-        "last_activity": "2025-06-29T21:46:27.352562",
-        "message_count": 104,
+        "last_activity": "2025-06-29T21:58:29.655410",
+        "message_count": 110,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "2079821973_1751234131.8977525": {
+        "user_id": 2079821973,
+        "post_id": "1751234131.8977444",
+        "message": "https://t.me/immm7/1612\n\nتفاعلات مختلفه 🌠 .",
+        "group_ids": [
+            "-1002072280303"
+        ],
+        "delay_seconds": 120,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-29T21:55:31.897755",
+        "last_activity": "2025-06-29T21:57:33.505001",
+        "message_count": 2,
         "message_id": null,
         "is_recurring": true
     }
