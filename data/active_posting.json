@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-30T12:29:54.836324",
-        "message_count": 46722,
+        "last_activity": "2025-06-30T12:43:55.035648",
+        "message_count": 46802,
         "message_id": null,
         "is_recurring": true
     },
@@ -1938,8 +1938,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T18:19:43.283099",
-        "last_activity": "2025-06-30T12:30:26.017147",
-        "message_count": 544,
+        "last_activity": "2025-06-30T12:44:28.654818",
+        "message_count": 551,
         "message_id": null,
         "is_recurring": true
     },
@@ -1954,8 +1954,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T21:55:31.897755",
-        "last_activity": "2025-06-30T12:30:25.188319",
-        "message_count": 437,
+        "last_activity": "2025-06-30T12:44:28.069118",
+        "message_count": 444,
         "message_id": null,
         "is_recurring": true
     },
@@ -1987,5 +1987,23 @@
         "message_count": 13,
         "message_id": null,
         "is_recurring": false
+    },
+    "2006323734_1751286922.7092211": {
+        "user_id": 2006323734,
+        "post_id": "1751286922.7092128",
+        "message": "للبيع حساب تيك توك هندي \nالمتابعين 6400\nلايك 54.4 الف\nيربط ايميل ورقم الجوال وضمان سحب \n\nالسعر :خاص لمعرفه السعر للصامل",
+        "group_ids": [
+            "-1002419365503",
+            "-1002616695744",
+            "-1002313109670"
+        ],
+        "delay_seconds": 100,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-06-30T12:35:22.709225",
+        "last_activity": "2025-06-30T12:43:49.359363",
+        "message_count": 12,
+        "message_id": null,
+        "is_recurring": true
     }
 }
