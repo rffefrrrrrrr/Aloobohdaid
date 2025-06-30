@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-06-30T12:19:25.247844",
-        "message_count": 46662,
+        "last_activity": "2025-06-30T12:29:54.836324",
+        "message_count": 46722,
         "message_id": null,
         "is_recurring": true
     },
@@ -1938,8 +1938,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T18:19:43.283099",
-        "last_activity": "2025-06-30T12:20:23.750506",
-        "message_count": 539,
+        "last_activity": "2025-06-30T12:30:26.017147",
+        "message_count": 544,
         "message_id": null,
         "is_recurring": true
     },
@@ -1954,9 +1954,38 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T21:55:31.897755",
-        "last_activity": "2025-06-30T12:20:23.034511",
-        "message_count": 432,
+        "last_activity": "2025-06-30T12:30:25.188319",
+        "message_count": 437,
         "message_id": null,
         "is_recurring": true
+    },
+    "2006323734_1751286628.1968048": {
+        "user_id": 2006323734,
+        "post_id": "1751286628.1967928",
+        "message": "للبيع حساب تيك توك هندي \nالمتابعين 6400\nلايك 54.4 الف\nيربط ايميل ورقم الجوال وضمان سحب \n\nالسعر :خاص لمعرفه السعر للصامل",
+        "group_ids": [
+            "-1002674067180",
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002302728986",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-06-30T12:30:28.196808",
+        "last_activity": "2025-06-30T12:30:34.488536",
+        "message_count": 13,
+        "message_id": null,
+        "is_recurring": false
     }
 }
