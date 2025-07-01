@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-07-01T20:05:53.941407",
-        "message_count": 53984,
+        "last_activity": "2025-07-01T20:19:51.848261",
+        "message_count": 54064,
         "message_id": null,
         "is_recurring": true
     },
@@ -1954,8 +1954,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T21:55:31.897755",
-        "last_activity": "2025-07-01T20:06:34.127983",
-        "message_count": 1070,
+        "last_activity": "2025-07-01T20:18:39.552306",
+        "message_count": 1076,
         "message_id": null,
         "is_recurring": true
     },
@@ -2003,6 +2003,71 @@
         "start_time": "2025-06-30T12:35:22.709225",
         "last_activity": "2025-07-01T06:53:44.876395",
         "message_count": 1306,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "2006323734_1751400615.9484527": {
+        "user_id": 2006323734,
+        "post_id": "1751400615.9484353",
+        "message": "مطلوب كميه لتك صرف كويس اخذ اي كميه كبيره او صغيره\nمطلوب لايك كارد \n( الصرف بيكون حسب الكميه )\n@C555O",
+        "group_ids": [
+            "-1002674067180",
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002302728986",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-07-01T20:10:15.948455",
+        "last_activity": "2025-07-01T20:10:21.735779",
+        "message_count": 13,
+        "message_id": null,
+        "is_recurring": false
+    },
+    "2006323734_1751400650.4176981": {
+        "user_id": 2006323734,
+        "post_id": "1751400650.4176853",
+        "message": "مطلوب كميه لتك صرف كويس اخذ اي كميه كبيره او صغيره\nمطلوب لايك كارد \n( الصرف بيكون حسب الكميه )\n@C555O",
+        "group_ids": [
+            "-1002646785081",
+            "-1002616695744",
+            "-1002313109670"
+        ],
+        "delay_seconds": 100,
+        "exact_time": null,
+        "status": "stopped",
+        "start_time": "2025-07-01T20:10:50.417701",
+        "last_activity": "2025-07-01T20:12:17.369099",
+        "message_count": 2,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "2006323734_1751400737.3001635": {
+        "user_id": 2006323734,
+        "post_id": "1751400737.3001509",
+        "message": "مطلوب كميه لتك صرف كويس اخذ اي كميه كبيره او صغيره\nمطلوب لايك كارد \n( الصرف بيكون حسب الكميه )\n@C555O",
+        "group_ids": [
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513"
+        ],
+        "delay_seconds": 100,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-07-01T20:12:17.300168",
+        "last_activity": "2025-07-01T20:19:03.366046",
+        "message_count": 15,
         "message_id": null,
         "is_recurring": true
     }
