@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-07-02T11:37:58.816843",
-        "message_count": 59230,
+        "last_activity": "2025-07-02T11:48:27.322379",
+        "message_count": 59287,
         "message_id": null,
         "is_recurring": true
     },
@@ -1938,8 +1938,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T18:19:43.283099",
-        "last_activity": "2025-07-02T11:36:20.843639",
-        "message_count": 1341,
+        "last_activity": "2025-07-02T11:48:23.338771",
+        "message_count": 1347,
         "message_id": null,
         "is_recurring": true
     },
@@ -1954,8 +1954,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T21:55:31.897755",
-        "last_activity": "2025-07-02T11:36:20.941983",
-        "message_count": 1533,
+        "last_activity": "2025-07-02T11:48:23.732908",
+        "message_count": 1539,
         "message_id": null,
         "is_recurring": true
     },
@@ -2068,6 +2068,35 @@
         "start_time": "2025-07-01T20:12:17.300168",
         "last_activity": "2025-07-02T05:10:41.254678",
         "message_count": 913,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "2006323734_1751456819.600874": {
+        "user_id": 2006323734,
+        "post_id": "1751456819.600851",
+        "message": "👋 مرحباً كافح المكافح!\n\n🤖 أنا بوت احترافي للنشر التلقائي في مجموعات تيليجرام.\n\n✅ لديك اشتراك نشط حتى: 2025-07-19",
+        "group_ids": [
+            "-1002674067180",
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002302728986",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": 100,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-07-02T11:46:59.600877",
+        "last_activity": "2025-07-02T11:48:49.744843",
+        "message_count": 24,
         "message_id": null,
         "is_recurring": true
     }
