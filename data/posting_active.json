@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-07-02T16:48:55.257154",
-        "message_count": 60921,
+        "last_activity": "2025-07-02T17:02:55.799062",
+        "message_count": 60997,
         "message_id": null,
         "is_recurring": true
     },
@@ -935,8 +935,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T23:36:53.971481",
-        "last_activity": "2025-07-02T16:48:49.184649",
-        "message_count": 207,
+        "last_activity": "2025-07-02T16:58:50.013790",
+        "message_count": 209,
         "message_id": null,
         "is_recurring": true
     },
@@ -1938,8 +1938,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T18:19:43.283099",
-        "last_activity": "2025-07-02T16:51:26.904117",
-        "message_count": 1498,
+        "last_activity": "2025-07-02T17:03:29.519557",
+        "message_count": 1504,
         "message_id": null,
         "is_recurring": true
     },
@@ -1954,8 +1954,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T21:55:31.897755",
-        "last_activity": "2025-07-02T16:51:25.829825",
-        "message_count": 1690,
+        "last_activity": "2025-07-02T17:03:28.778021",
+        "message_count": 1696,
         "message_id": null,
         "is_recurring": true
     },
@@ -2099,5 +2099,34 @@
         "message_count": 48,
         "message_id": null,
         "is_recurring": true
+    },
+    "2006323734_1751475578.050004": {
+        "user_id": 2006323734,
+        "post_id": "1751475578.0499897",
+        "message": "صلو ع النبي",
+        "group_ids": [
+            "-1002674067180",
+            "-1002453847184",
+            "-1002189546504",
+            "-1002646785081",
+            "-1002419365503",
+            "-1002616695744",
+            "-1002233350513",
+            "-1002212734419",
+            "-1001894777304",
+            "-1002302728986",
+            "-1002595322336",
+            "-1002300255613",
+            "-1002830046857",
+            "-1002313109670"
+        ],
+        "delay_seconds": null,
+        "exact_time": null,
+        "status": "completed",
+        "start_time": "2025-07-02T16:59:38.050008",
+        "last_activity": "2025-07-02T16:59:43.455984",
+        "message_count": 12,
+        "message_id": null,
+        "is_recurring": false
     }
 }
