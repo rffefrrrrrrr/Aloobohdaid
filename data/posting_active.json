@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-07-03T19:15:27.111774",
-        "message_count": 69585,
+        "last_activity": "2025-07-03T19:25:55.103897",
+        "message_count": 69642,
         "message_id": null,
         "is_recurring": true
     },
@@ -1938,8 +1938,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-29T18:19:43.283099",
-        "last_activity": "2025-07-03T19:17:11.228851",
-        "message_count": 2287,
+        "last_activity": "2025-07-03T19:29:13.516709",
+        "message_count": 2293,
         "message_id": null,
         "is_recurring": true
     },
@@ -1952,10 +1952,10 @@
         ],
         "delay_seconds": 120,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-06-29T21:55:31.897755",
-        "last_activity": "2025-07-03T19:17:10.765113",
-        "message_count": 2479,
+        "last_activity": "2025-07-03T19:28:50.591615",
+        "message_count": 2484,
         "message_id": null,
         "is_recurring": true
     },
@@ -2128,5 +2128,21 @@
         "message_count": 12,
         "message_id": null,
         "is_recurring": false
+    },
+    "2079821973_1751570951.348575": {
+        "user_id": 2079821973,
+        "post_id": "1751570951.3485553",
+        "message": "https://t.me/immm7/1621\n\nاقل تفاعلات غيرها م اردها 🤍 .",
+        "group_ids": [
+            "-1002072280303"
+        ],
+        "delay_seconds": 120,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-07-03T19:29:11.348579",
+        "last_activity": "2025-07-03T19:29:12.437913",
+        "message_count": 1,
+        "message_id": null,
+        "is_recurring": true
     }
 }
