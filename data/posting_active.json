@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-07-05T10:19:21.660694",
-        "message_count": 82227,
+        "last_activity": "2025-07-05T10:29:48.454521",
+        "message_count": 82287,
         "message_id": null,
         "is_recurring": true
     },
@@ -2156,8 +2156,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-07-04T02:06:05.028058",
-        "last_activity": "2025-07-05T10:18:08.795636",
-        "message_count": 904,
+        "last_activity": "2025-07-05T10:30:11.343666",
+        "message_count": 910,
         "message_id": null,
         "is_recurring": true
     },
@@ -2189,5 +2189,21 @@
         "message_count": 11,
         "message_id": null,
         "is_recurring": false
+    },
+    "7924814676_1751711231.6066608": {
+        "user_id": 7924814676,
+        "post_id": "1751711231.60665",
+        "message": "متوفر ارقام تيليجرام",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 70,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-07-05T10:27:11.606665",
+        "last_activity": "2025-07-05T10:30:43.870975",
+        "message_count": 4,
+        "message_id": null,
+        "is_recurring": true
     }
 }
