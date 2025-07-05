@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-07-05T21:59:26.266187",
-        "message_count": 85727,
+        "last_activity": "2025-07-05T22:13:23.300610",
+        "message_count": 85807,
         "message_id": null,
         "is_recurring": true
     },
@@ -2156,8 +2156,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-07-04T02:06:05.028058",
-        "last_activity": "2025-07-05T22:00:12.884100",
-        "message_count": 1209,
+        "last_activity": "2025-07-05T22:12:15.069166",
+        "message_count": 1215,
         "message_id": null,
         "is_recurring": true
     },
@@ -2201,8 +2201,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-07-05T10:27:11.606665",
-        "last_activity": "2025-07-05T22:01:35.551898",
-        "message_count": 514,
+        "last_activity": "2025-07-05T22:13:19.611601",
+        "message_count": 524,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "7776621643_1751753343.9276893": {
+        "user_id": 7776621643,
+        "post_id": "1751753343.927679",
+        "message": "متوفر osn\nمتوفر بوت نشر",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 300,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-07-05T22:09:03.927693",
+        "last_activity": "2025-07-05T22:09:04.509571",
+        "message_count": 1,
         "message_id": null,
         "is_recurring": true
     }
