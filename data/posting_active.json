@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-07-07T12:06:00.426019",
-        "message_count": 98728,
+        "last_activity": "2025-07-07T12:20:01.890441",
+        "message_count": 98808,
         "message_id": null,
         "is_recurring": true
     },
@@ -2201,8 +2201,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-07-05T10:27:11.606665",
-        "last_activity": "2025-07-07T12:07:30.808074",
-        "message_count": 1845,
+        "last_activity": "2025-07-07T12:20:25.864913",
+        "message_count": 1856,
         "message_id": null,
         "is_recurring": true
     },
@@ -2217,8 +2217,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-07-05T22:09:03.927693",
-        "last_activity": "2025-07-07T12:04:21.816627",
-        "message_count": 377,
+        "last_activity": "2025-07-07T12:19:22.858656",
+        "message_count": 380,
         "message_id": null,
         "is_recurring": true
     },
@@ -2265,8 +2265,24 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-07-07T04:02:08.366932",
-        "last_activity": "2025-07-07T12:06:34.892248",
-        "message_count": 242,
+        "last_activity": "2025-07-07T12:20:37.735952",
+        "message_count": 249,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "1369504903_1751890196.643467": {
+        "user_id": 1369504903,
+        "post_id": "1751890196.6434557",
+        "message": "متوفر قريه كلاش تاون ١١ ماكس سوم اوريك الصور خاص",
+        "group_ids": [
+            "-1001599134989"
+        ],
+        "delay_seconds": 200,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-07-07T12:09:56.643470",
+        "last_activity": "2025-07-07T12:19:58.146763",
+        "message_count": 4,
         "message_id": null,
         "is_recurring": true
     }
