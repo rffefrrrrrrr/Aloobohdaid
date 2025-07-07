@@ -919,8 +919,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-06-24T20:10:42.201011",
-        "last_activity": "2025-07-07T03:57:21.296397",
-        "message_count": 95928,
+        "last_activity": "2025-07-07T04:07:47.220342",
+        "message_count": 95988,
         "message_id": null,
         "is_recurring": true
     },
@@ -2154,10 +2154,10 @@
         ],
         "delay_seconds": 120,
         "exact_time": null,
-        "status": "running",
+        "status": "stopped",
         "start_time": "2025-07-04T02:06:05.028058",
-        "last_activity": "2025-07-07T03:56:37.245974",
-        "message_count": 2094,
+        "last_activity": "2025-07-07T04:01:19.191490",
+        "message_count": 2096,
         "message_id": null,
         "is_recurring": true
     },
@@ -2201,8 +2201,8 @@
         "exact_time": null,
         "status": "running",
         "start_time": "2025-07-05T10:27:11.606665",
-        "last_activity": "2025-07-07T03:57:24.818627",
-        "message_count": 1433,
+        "last_activity": "2025-07-07T04:10:19.302636",
+        "message_count": 1444,
         "message_id": null,
         "is_recurring": true
     },
@@ -2235,6 +2235,38 @@
         "start_time": "2025-07-06T23:07:09.015688",
         "last_activity": "2025-07-07T00:54:36.413837",
         "message_count": 30,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "2079821973_1751860879.1714602": {
+        "user_id": 2079821973,
+        "post_id": "1751860879.171442",
+        "message": "https://t.me/immm7/1768\n\nاقل تفاعلات ضروري 🌠 .",
+        "group_ids": [
+            "-1002072280303"
+        ],
+        "delay_seconds": 120,
+        "exact_time": null,
+        "status": "stopped",
+        "start_time": "2025-07-07T04:01:19.171465",
+        "last_activity": "2025-07-07T04:02:08.858158",
+        "message_count": 1,
+        "message_id": null,
+        "is_recurring": true
+    },
+    "2079821973_1751860928.366928": {
+        "user_id": 2079821973,
+        "post_id": "1751860928.3669186",
+        "message": "https://t.me/immm7/1768\n\nتفاعلات متنوعه 🌠 .",
+        "group_ids": [
+            "-1002072280303"
+        ],
+        "delay_seconds": 120,
+        "exact_time": null,
+        "status": "running",
+        "start_time": "2025-07-07T04:02:08.366932",
+        "last_activity": "2025-07-07T04:10:10.679482",
+        "message_count": 5,
         "message_id": null,
         "is_recurring": true
     }
