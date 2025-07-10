@@ -37,8 +37,7 @@ set_admin_user()
 
 
 # -*- coding: utf-8 -*-
-# from keep_alive_http import keep_alive
-# keep_alive()
+from keep_alive import keep_alive
 
 import logging
 import time
@@ -283,7 +282,7 @@ def main():
         return
     
     # تشغيل خادم الويب للحفاظ على البوت نشطاً 24/7
-    # keep_alive() # REMOVED - Server is started by run_persistently.sh
+    keep_alive()  # تشغيل خادم Flask لضمان بقاء البوت نشطًا
     
     # إنشاء كائن البوت
     bot = Bot()
