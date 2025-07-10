@@ -1,0 +1,146 @@
+2025-04-23 15:21:35,730 - Fix - INFO - Found 17 tables in the database: users, subscriptions, sqlite_sequence, sessions, scheduled_posts, post_groups, referrals, responses, settings, posts, messages, active_tasks, status_updates, recurring_tasks, tasks, groups_old, groups
+2025-04-23 15:21:35,730 - Fix - INFO - Checking posts table for missing columns...
+2025-04-23 15:21:35,731 - Fix - INFO - Column 'last_cycle' already exists in posts table
+2025-04-23 15:21:35,744 - Fix - INFO - Added column 'last_cycle_success' to posts table
+2025-04-23 15:21:35,749 - Fix - INFO - Added column 'last_cycle_total' to posts table
+2025-04-23 15:21:35,755 - Fix - INFO - Added column 'message_id' to posts table
+2025-04-23 15:21:35,755 - Fix - INFO - Column 'status' already exists in posts table
+2025-04-23 15:21:35,755 - Fix - INFO - Column 'created_at' already exists in posts table
+2025-04-23 15:21:35,756 - Fix - INFO - Column 'updated_at' already exists in posts table
+2025-04-23 15:21:35,761 - Fix - INFO - Added column 'scheduled_time' to posts table
+2025-04-23 15:21:35,767 - Fix - INFO - Added column 'is_active' to posts table
+2025-04-23 15:21:35,773 - Fix - INFO - Added column 'error_count' to posts table
+2025-04-23 15:21:35,778 - Fix - INFO - Added column 'last_error' to posts table
+2025-04-23 15:21:35,784 - Fix - INFO - Added column 'retry_count' to posts table
+2025-04-23 15:21:35,790 - Fix - INFO - Added column 'last_retry' to posts table
+2025-04-23 15:21:35,790 - Fix - INFO - Column 'group_ids' already exists in posts table
+2025-04-23 15:21:35,790 - Fix - INFO - Column 'user_id' already exists in posts table
+2025-04-23 15:21:35,798 - Fix - INFO - Added column 'content_type' to posts table
+2025-04-23 15:21:35,807 - Fix - INFO - Added column 'media_path' to posts table
+2025-04-23 15:21:35,815 - Fix - INFO - Added column 'caption' to posts table
+2025-04-23 15:21:35,822 - Fix - INFO - Added column 'buttons' to posts table
+2025-04-23 15:21:35,828 - Fix - INFO - Added column 'is_scheduled' to posts table
+2025-04-23 15:21:35,828 - Fix - INFO - Checking users table for missing columns...
+2025-04-23 15:21:35,829 - Fix - INFO - Column 'user_id' already exists in users table
+2025-04-23 15:21:35,829 - Fix - INFO - Column 'username' already exists in users table
+2025-04-23 15:21:35,829 - Fix - INFO - Column 'first_name' already exists in users table
+2025-04-23 15:21:35,829 - Fix - INFO - Column 'last_name' already exists in users table
+2025-04-23 15:21:35,830 - Fix - INFO - Column 'is_admin' already exists in users table
+2025-04-23 15:21:35,836 - Fix - INFO - Added column 'is_active' to users table
+2025-04-23 15:21:35,836 - Fix - INFO - Column 'created_at' already exists in users table
+2025-04-23 15:21:35,837 - Fix - INFO - Column 'updated_at' already exists in users table
+2025-04-23 15:21:35,838 - Fix - INFO - Column 'subscription_end' already exists in users table
+2025-04-23 15:21:35,838 - Fix - INFO - Column 'referral_code' already exists in users table
+2025-04-23 15:21:35,839 - Fix - INFO - Column 'referred_by' already exists in users table
+2025-04-23 15:21:35,840 - Fix - INFO - Column 'phone_number' already exists in users table
+2025-04-23 15:21:35,840 - Fix - INFO - Column 'api_id' already exists in users table
+2025-04-23 15:21:35,841 - Fix - INFO - Column 'api_hash' already exists in users table
+2025-04-23 15:21:35,844 - Fix - INFO - Column 'session_string' already exists in users table
+2025-04-23 15:21:35,844 - Fix - INFO - Column 'phone_code_hash' already exists in users table
+2025-04-23 15:21:35,845 - Fix - INFO - Column 'code_request_time' already exists in users table
+2025-04-23 15:21:35,845 - Fix - INFO - Column 'code_resend_attempts' already exists in users table
+2025-04-23 15:21:35,845 - Fix - INFO - Column 'code_input_attempts' already exists in users table
+2025-04-23 15:21:35,846 - Fix - INFO - Column 'telegram_user_id' already exists in users table
+2025-04-23 15:21:35,846 - Fix - INFO - Column 'telegram_username' already exists in users table
+2025-04-23 15:21:35,847 - Fix - INFO - Column 'telegram_first_name' already exists in users table
+2025-04-23 15:21:35,847 - Fix - INFO - Column 'telegram_last_name' already exists in users table
+2025-04-23 15:21:35,853 - Fix - INFO - Added column 'last_login' to users table
+2025-04-23 15:21:35,859 - Fix - INFO - Added column 'login_count' to users table
+2025-04-23 15:21:35,859 - Fix - INFO - Checking sessions table for missing columns...
+2025-04-23 15:21:35,912 - Fix - INFO - Column 'id' already exists in sessions table
+2025-04-23 15:21:35,912 - Fix - INFO - Column 'user_id' already exists in sessions table
+2025-04-23 15:21:35,933 - Fix - INFO - Added column 'session_id' to sessions table
+2025-04-23 15:21:35,933 - Fix - INFO - Column 'session_string' already exists in sessions table
+2025-04-23 15:21:35,933 - Fix - INFO - Column 'api_id' already exists in sessions table
+2025-04-23 15:21:35,933 - Fix - INFO - Column 'api_hash' already exists in sessions table
+2025-04-23 15:21:35,944 - Fix - INFO - Added column 'phone_number' to sessions table
+2025-04-23 15:21:35,944 - Fix - INFO - Column 'created_at' already exists in sessions table
+2025-04-23 15:21:35,945 - Fix - INFO - Column 'updated_at' already exists in sessions table
+2025-04-23 15:21:35,950 - Fix - INFO - Added column 'last_used' to sessions table
+2025-04-23 15:21:35,956 - Fix - INFO - Added column 'is_active' to sessions table
+2025-04-23 15:21:35,961 - Fix - INFO - Added column 'device_model' to sessions table
+2025-04-23 15:21:35,967 - Fix - INFO - Added column 'system_version' to sessions table
+2025-04-23 15:21:35,973 - Fix - INFO - Added column 'app_version' to sessions table
+2025-04-23 15:21:35,978 - Fix - INFO - Added column 'expires_at' to sessions table
+2025-04-23 15:21:35,984 - Fix - INFO - Added column 'telegram_user_id' to sessions table
+2025-04-23 15:21:35,989 - Fix - INFO - Added column 'telegram_username' to sessions table
+2025-04-23 15:21:35,995 - Fix - INFO - Added column 'telegram_first_name' to sessions table
+2025-04-23 15:21:36,001 - Fix - INFO - Added column 'telegram_last_name' to sessions table
+2025-04-23 15:21:36,001 - Fix - INFO - Checking subscriptions table for missing columns...
+2025-04-23 15:21:36,002 - Fix - INFO - Column 'id' already exists in subscriptions table
+2025-04-23 15:21:36,002 - Fix - INFO - Column 'user_id' already exists in subscriptions table
+2025-04-23 15:21:36,002 - Fix - INFO - Column 'days' already exists in subscriptions table
+2025-04-23 15:21:36,004 - Fix - ERROR - Error fixing database: Cannot add a column with non-constant default
+2025-04-23 15:21:43,457 - Fix - INFO - Found 17 tables in the database: users, subscriptions, sqlite_sequence, sessions, scheduled_posts, post_groups, referrals, responses, settings, posts, messages, active_tasks, status_updates, recurring_tasks, tasks, groups_old, groups
+2025-04-23 15:21:43,458 - Fix - INFO - Checking posts table for missing columns...
+2025-04-23 15:21:43,458 - Fix - INFO - Column 'last_cycle' already exists in posts table
+2025-04-23 15:21:43,459 - Fix - INFO - Column 'last_cycle_success' already exists in posts table
+2025-04-23 15:21:43,459 - Fix - INFO - Column 'last_cycle_total' already exists in posts table
+2025-04-23 15:21:43,509 - Fix - INFO - Column 'message_id' already exists in posts table
+2025-04-23 15:21:43,509 - Fix - INFO - Column 'status' already exists in posts table
+2025-04-23 15:21:43,509 - Fix - INFO - Column 'created_at' already exists in posts table
+2025-04-23 15:21:43,509 - Fix - INFO - Column 'updated_at' already exists in posts table
+2025-04-23 15:21:43,510 - Fix - INFO - Column 'scheduled_time' already exists in posts table
+2025-04-23 15:21:43,510 - Fix - INFO - Column 'is_active' already exists in posts table
+2025-04-23 15:21:43,510 - Fix - INFO - Column 'error_count' already exists in posts table
+2025-04-23 15:21:43,510 - Fix - INFO - Column 'last_error' already exists in posts table
+2025-04-23 15:21:43,510 - Fix - INFO - Column 'retry_count' already exists in posts table
+2025-04-23 15:21:43,510 - Fix - INFO - Column 'last_retry' already exists in posts table
+2025-04-23 15:21:43,511 - Fix - INFO - Column 'group_ids' already exists in posts table
+2025-04-23 15:21:43,511 - Fix - INFO - Column 'user_id' already exists in posts table
+2025-04-23 15:21:43,511 - Fix - INFO - Column 'content_type' already exists in posts table
+2025-04-23 15:21:43,511 - Fix - INFO - Column 'media_path' already exists in posts table
+2025-04-23 15:21:43,511 - Fix - INFO - Column 'caption' already exists in posts table
+2025-04-23 15:21:43,511 - Fix - INFO - Column 'buttons' already exists in posts table
+2025-04-23 15:21:43,511 - Fix - INFO - Column 'is_scheduled' already exists in posts table
+2025-04-23 15:21:43,511 - Fix - INFO - Checking users table for missing columns...
+2025-04-23 15:21:43,511 - Fix - INFO - Column 'user_id' already exists in users table
+2025-04-23 15:21:43,512 - Fix - INFO - Column 'username' already exists in users table
+2025-04-23 15:21:43,512 - Fix - INFO - Column 'first_name' already exists in users table
+2025-04-23 15:21:43,512 - Fix - INFO - Column 'last_name' already exists in users table
+2025-04-23 15:21:43,512 - Fix - INFO - Column 'is_admin' already exists in users table
+2025-04-23 15:21:43,512 - Fix - INFO - Column 'is_active' already exists in users table
+2025-04-23 15:21:43,512 - Fix - INFO - Column 'created_at' already exists in users table
+2025-04-23 15:21:43,522 - Fix - INFO - Column 'updated_at' already exists in users table
+2025-04-23 15:21:43,522 - Fix - INFO - Column 'subscription_end' already exists in users table
+2025-04-23 15:21:43,522 - Fix - INFO - Column 'referral_code' already exists in users table
+2025-04-23 15:21:43,522 - Fix - INFO - Column 'referred_by' already exists in users table
+2025-04-23 15:21:43,522 - Fix - INFO - Column 'phone_number' already exists in users table
+2025-04-23 15:21:43,523 - Fix - INFO - Column 'api_id' already exists in users table
+2025-04-23 15:21:43,523 - Fix - INFO - Column 'api_hash' already exists in users table
+2025-04-23 15:21:43,523 - Fix - INFO - Column 'session_string' already exists in users table
+2025-04-23 15:21:43,523 - Fix - INFO - Column 'phone_code_hash' already exists in users table
+2025-04-23 15:21:43,523 - Fix - INFO - Column 'code_request_time' already exists in users table
+2025-04-23 15:21:43,523 - Fix - INFO - Column 'code_resend_attempts' already exists in users table
+2025-04-23 15:21:43,523 - Fix - INFO - Column 'code_input_attempts' already exists in users table
+2025-04-23 15:21:43,523 - Fix - INFO - Column 'telegram_user_id' already exists in users table
+2025-04-23 15:21:43,524 - Fix - INFO - Column 'telegram_username' already exists in users table
+2025-04-23 15:21:43,524 - Fix - INFO - Column 'telegram_first_name' already exists in users table
+2025-04-23 15:21:43,524 - Fix - INFO - Column 'telegram_last_name' already exists in users table
+2025-04-23 15:21:43,529 - Fix - INFO - Column 'last_login' already exists in users table
+2025-04-23 15:21:43,530 - Fix - INFO - Column 'login_count' already exists in users table
+2025-04-23 15:21:43,530 - Fix - INFO - Checking sessions table for missing columns...
+2025-04-23 15:21:43,530 - Fix - INFO - Column 'id' already exists in sessions table
+2025-04-23 15:21:43,530 - Fix - INFO - Column 'user_id' already exists in sessions table
+2025-04-23 15:21:43,530 - Fix - INFO - Column 'session_id' already exists in sessions table
+2025-04-23 15:21:43,530 - Fix - INFO - Column 'session_string' already exists in sessions table
+2025-04-23 15:21:43,530 - Fix - INFO - Column 'api_id' already exists in sessions table
+2025-04-23 15:21:43,530 - Fix - INFO - Column 'api_hash' already exists in sessions table
+2025-04-23 15:21:43,531 - Fix - INFO - Column 'phone_number' already exists in sessions table
+2025-04-23 15:21:43,531 - Fix - INFO - Column 'created_at' already exists in sessions table
+2025-04-23 15:21:43,531 - Fix - INFO - Column 'updated_at' already exists in sessions table
+2025-04-23 15:21:43,531 - Fix - INFO - Column 'last_used' already exists in sessions table
+2025-04-23 15:21:43,531 - Fix - INFO - Column 'is_active' already exists in sessions table
+2025-04-23 15:21:43,531 - Fix - INFO - Column 'device_model' already exists in sessions table
+2025-04-23 15:21:43,542 - Fix - INFO - Column 'system_version' already exists in sessions table
+2025-04-23 15:21:43,542 - Fix - INFO - Column 'app_version' already exists in sessions table
+2025-04-23 15:21:43,543 - Fix - INFO - Column 'expires_at' already exists in sessions table
+2025-04-23 15:21:43,543 - Fix - INFO - Column 'telegram_user_id' already exists in sessions table
+2025-04-23 15:21:43,543 - Fix - INFO - Column 'telegram_username' already exists in sessions table
+2025-04-23 15:21:43,543 - Fix - INFO - Column 'telegram_first_name' already exists in sessions table
+2025-04-23 15:21:43,543 - Fix - INFO - Column 'telegram_last_name' already exists in sessions table
+2025-04-23 15:21:43,543 - Fix - INFO - Checking subscriptions table for missing columns...
+2025-04-23 15:21:43,543 - Fix - INFO - Column 'id' already exists in subscriptions table
+2025-04-23 15:21:43,544 - Fix - INFO - Column 'user_id' already exists in subscriptions table
+2025-04-23 15:21:43,544 - Fix - INFO - Column 'days' already exists in subscriptions table
+2025-04-23 15:21:43,544 - Fix - ERROR - Error fixing database: Cannot add a column with non-constant default
