@@ -247,12 +247,11 @@ def watchdog(bot_instance, logger):
 async def setup_commands(application):
     """Sets the bot commands to only /start and /help."""
     commands = [
-        BotCommand("start", "بدء التفاعل مع البوت"),
-        BotCommand("help", "عرض قائمة المساعدة والأوامر"),
+        BotCommand("start", "بدء التفاعل مع البوت")
     ]
     try:
         await application.bot.set_my_commands(commands)
-        print("تم تعيين أوامر البوت بنجاح: /start, /help")
+        print("تم تعيين أوامر البوت بنجاح: /start")
     except Exception as e:
         print(f"خطأ في تعيين أوامر البوت: {e}")
 # --- END ADDED COMMAND SETUP FUNCTION ---
