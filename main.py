@@ -248,11 +248,11 @@ async def setup_commands(application):
     """Sets the bot commands to only /start and /help."""
     commands = [
         BotCommand("start", "بدء التفاعل مع البوت"),
-        BotCommand("help", "عرض قائمة المساعدة والأوامر"),
+
     ]
     try:
         await application.bot.set_my_commands(commands)
-        print("تم تعيين أوامر البوت بنجاح: /start, /help")
+        print("تم تعيين أوامر البوت بنجاح: /start")
     except Exception as e:
         print(f"خطأ في تعيين أوامر البوت: {e}")
 # --- END ADDED COMMAND SETUP FUNCTION ---
@@ -318,6 +318,8 @@ def main():
     
     # Use application.run_polling() directly, which handles the loop
     try:
+        print("Deleting webhook (if any)...")
+        asyncio.run(bot.application.bot.delete_webhook(drop_pending_updates=True))
         print("Starting bot polling...")
         bot.application.run_polling(drop_pending_updates=True)
     except Exception as e:

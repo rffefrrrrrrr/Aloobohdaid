@@ -1,2 +1,2 @@
 # تكوين البوت
-BOT_TOKEN = os.getenv("BOT_TOKEN") # قم بتغيير هذا إلى رمز البوت الخاص بك
+BOT_TOKEN = "8041887071:AAFwB_CWUs_H-pNbzQjAvznfcaXzVVdx7qY" # تم تعيين رمز البوت مباشرة

@@ -64,9 +64,8 @@ class StartHelpHandlers:
         self.register_handlers()
 
     def register_handlers(self):
-        # Register start and help commands (Keep original)
+        # Register start and help commands
         self.dispatcher.add_handler(CommandHandler("start", self.start_command))
-        self.dispatcher.add_handler(CommandHandler("help", self.help_command))
         self.dispatcher.add_handler(CommandHandler("api_info", self.api_info_command)) # Keep api_info command handler
 
         # Register callback queries - MODIFIED: Add referral_ pattern
@@ -166,22 +165,18 @@ class StartHelpHandlers:
             InlineKeyboardButton("📝 أوامر النشر", callback_data="start_posting_commands")
         ])
 
-        # Always add Help button
-        keyboard.append([
-            InlineKeyboardButton("📋 المساعدة", callback_data="start_help")
-        ])
+
 
         reply_markup = InlineKeyboardMarkup(keyboard)
         
-        # Use reply_text for commands (Keep original logic)
+        # Use reply_text for commands
         if update.message:
              await update.message.reply_text(
                  text=welcome_text,
                  reply_markup=reply_markup
              )
-        # Use edit_message_text for callbacks (like start_back)
+        # Use edit_message_text for callbacks
         elif update.callback_query:
-             # This part might be needed if start_command is called from a callback
              await update.callback_query.edit_message_text(
                  text=welcome_text,
                  reply_markup=reply_markup
@@ -852,80 +847,7 @@ class StartHelpHandlers:
                 
         # Keep original start_back logic
         elif data == "start_back":
-            # Regenerate the main menu using query.edit_message_text
-            user = update.effective_user
-            user_id = user.id
-            db_user = self.subscription_service.get_user(user_id)
-            is_admin = db_user and db_user.is_admin
-            has_subscription = db_user and db_user.has_active_subscription()
-
-            # Welcome message
-            welcome_text = f"👋 مرحباً {user.first_name}!\n\n"
-            if is_admin:
-                welcome_text += "🔰 أنت مسجل كمشرف في النظام.\n\n"
-            welcome_text += "🤖 أنا بوت احترافي للنشر التلقائي في مجموعات وقنوات تيليجرام.\n\n"
-            # Create keyboard
-            keyboard = []
-            keyboard.append([
-                InlineKeyboardButton("🔗 الإحالة", callback_data="start_referral")
-            ])
-            keyboard.append([
-                InlineKeyboardButton("🎁 الحصول على تجربة مجانية (يوم واحد)", callback_data="start_trial")
-            ])
-
-            if has_subscription:
-                if db_user.subscription_end:
-                    end_date = db_user.subscription_end.strftime("%Y-%m-%d")
-                    welcome_text += f"✅ لديك اشتراك نشط حتى: {end_date}\n\n"
-                else:
-                    welcome_text += f"✅ لديك اشتراك نشط غير محدود المدة\n\n"
-                
-                session_string = None
-                if self.auth_service is not None:
-                    session_string = self.auth_service.get_user_session(user_id)
-                
-                if session_string:
-                    welcome_text += "✅ أنت مسجل يمكنك استعمال بوت\n\n" # User is logged in
-                else:
-                    welcome_text += "⚠️ أنت لم تسجل ولا يمكنك استعمال بوت\n\n" # User is not logged in
-            else:
-                welcome_text += "⚠️ ليس لديك اشتراك نشط.\n\n"
-                trial_claimed = db_user.trial_claimed if hasattr(db_user, "trial_claimed") else False
-                if trial_claimed:
-                     welcome_text += "لقد استخدمت الفترة التجريبية المجانية بالفعل.\n"
-                
-                try:
-                    admin_chat = await context.bot.get_chat(ADMIN_USER_ID)
-                    admin_username = admin_chat.username
-                    button_text = f"🔔 طلب اشتراك (تواصل مع @{admin_username})" if admin_username else "🔔 طلب اشتراك (تواصل مع المشرف)"
-                except Exception as e:
-                    logger.error(f"Error fetching admin username: {e}") # Use logger
-                    button_text = "🔔 طلب اشتراك (تواصل مع المشرف)" # Fallback on error
-                
-                keyboard.append([
-                    InlineKeyboardButton(button_text, callback_data="start_subscription")
-                ])
-
-            # Add Usage Info button
-            keyboard.append([
-                InlineKeyboardButton("ℹ️ معلومات الاستخدام", callback_data="start_usage_info")
-            ])
-
-            # Always add Help button
-            keyboard.append([
-                InlineKeyboardButton("📋 المساعدة", callback_data="start_help")
-            ])
-
-            reply_markup = InlineKeyboardMarkup(keyboard)
-            try:
-                await query.edit_message_text(
-                    text=welcome_text,
-                    reply_markup=reply_markup
-                )
-            except Exception as e:
-                logger.error(f"Error editing message in start_back: {e}") # Use logger
-                # Fallback: Try sending a new message if edit fails
-                await update.effective_message.reply_text(text=welcome_text, reply_markup=reply_markup)
+            await self.start_command(update, context)
         
         # Keep original help_account logic
         elif data == "help_account":
