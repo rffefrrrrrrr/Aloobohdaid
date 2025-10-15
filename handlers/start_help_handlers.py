@@ -161,6 +161,11 @@ class StartHelpHandlers:
             InlineKeyboardButton("ℹ️ معلومات الاستخدام", callback_data="start_usage_info")
         ])
 
+        # Add Posting Commands button
+        keyboard.append([
+            InlineKeyboardButton("📝 أوامر النشر", callback_data="start_posting_commands")
+        ])
+
         # Always add Help button
         keyboard.append([
             InlineKeyboardButton("📋 المساعدة", callback_data="start_help")
@@ -193,36 +198,47 @@ class StartHelpHandlers:
         is_admin = db_user and db_user.is_admin
         has_subscription = db_user and db_user.has_active_subscription()
 
-        help_text = "📋 قائمة الأوامر المتاحة:\n\n"
+        await self.start_command(update, context)
 
-        # Create keyboard with help categories (Keep original)
+    # Keep original api_info_command
+    async def posting_commands_menu(self, update: Update, context: CallbackContext):
+        """Display the posting commands menu."""
+        user = update.effective_user
+        user_id = user.id
+        db_user = self.subscription_service.get_user(user_id)
+        is_admin = db_user and db_user.is_admin
+
+        posting_text = "📝 أوامر النشر المتاحة:\n\n"
         keyboard = [
             [InlineKeyboardButton("🔑 أوامر الحساب", callback_data="help_account")],
             [InlineKeyboardButton("👥 أوامر المجموعات", callback_data="help_groups")],
             [InlineKeyboardButton("📝 أوامر النشر", callback_data="help_posting")],
             [InlineKeyboardButton("🤖 أوامر الردود", callback_data="help_responses")],
-            [InlineKeyboardButton("🔗 أوامر الإحالات", callback_data="help_referrals")] # Keep this button
+            [InlineKeyboardButton("🔗 أوامر الإحالات", callback_data="help_referrals")]
         ]
 
-        # Add admin button if user is admin
         if is_admin:
             keyboard.append([
                 InlineKeyboardButton("👨‍💼 أوامر المشرف", callback_data="help_admin")
             ])
 
-        # Add back to start button
         keyboard.append([
-            InlineKeyboardButton("🔙 العودة للبداية", callback_data="help_back_to_start")
+            InlineKeyboardButton("🔙 العودة للبداية", callback_data="start_back")
         ])
 
         reply_markup = InlineKeyboardMarkup(keyboard)
 
-        await update.message.reply_text(
-            text=help_text,
-            reply_markup=reply_markup
-        )
+        if update.callback_query:
+            await update.callback_query.edit_message_text(
+                text=posting_text,
+                reply_markup=reply_markup
+            )
+        else:
+            await update.message.reply_text(
+                text=posting_text,
+                reply_markup=reply_markup
+            )
 
-    # Keep original api_info_command
     async def api_info_command(self, update: Update, context: CallbackContext):
          """Handle the /api_info command to show API session status."""
          info_message = (
@@ -417,6 +433,8 @@ class StartHelpHandlers:
                         reply_markup=reply_markup # Keep the buttons
                     )
 
+        elif data == "start_posting_commands":
+            await self.posting_commands_menu(update, context)
         # MODIFIED: start_subscription logic to add request to DB and send two messages
         elif data == "start_subscription":
             user_info = update.effective_user
@@ -569,7 +587,7 @@ class StartHelpHandlers:
                     InlineKeyboardButton("👨‍💼 أوامر المشرف", callback_data="help_admin")
                 ])
             keyboard.append([
-                InlineKeyboardButton("🔙 العودة للبداية", callback_data="help_back_to_start") # Changed from help_back
+                InlineKeyboardButton("🔙 العودة للبداية", callback_data="start_back") # Changed from help_back
             ])
             reply_markup = InlineKeyboardMarkup(keyboard)
             try:
@@ -1040,7 +1058,7 @@ class StartHelpHandlers:
 
                 # Add back to start button
                 keyboard.append([
-                    InlineKeyboardButton("🔙 العودة للبداية", callback_data="help_back_to_start")
+                    InlineKeyboardButton("🔙 العودة للبداية", callback_data="start_back")
                 ])
 
                 reply_markup = InlineKeyboardMarkup(keyboard)

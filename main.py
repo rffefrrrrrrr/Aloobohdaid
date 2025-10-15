@@ -24,7 +24,8 @@ def set_admin_user():
         print(f"تم تعيين المستخدم {your_user_id} كمسؤول بنجاح")
     else:
         # إذا لم يكن المستخدم موجوداً، قم بإنشاء مستخدم جديد كمسؤول
-        new_user = User(id=your_user_id, is_admin=True)
+        new_user = User(your_user_id)
+        new_user.is_admin = True
         # حفظ المستخدم الجديد (بدون await)
         subscription_service.save_user(new_user)
         print(f"تم إنشاء مستخدم جديد {your_user_id} وتعيينه كمسؤول")
