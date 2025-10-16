@@ -65,7 +65,7 @@ class Bot:
         self.start_help_handlers = StartHelpHandlers(self.application)
 
         # Auth handlers
-        self.auth_handlers = AuthHandlers(self.application, proxy=self.proxy) # Pass application and proxy
+        self.auth_handlers = AuthHandlers(self.application, self.subscription_handlers, self.start_help_handlers, proxy=self.proxy) # Pass application and proxy
 
         # Group handlers
         self.group_handlers = GroupHandlers(self.application)
@@ -145,7 +145,7 @@ class Bot:
         self.start_help_handlers = StartHelpHandlers(self.application)
 
         # Auth handlers
-        self.auth_handlers = AuthHandlers(self.application, proxy=self.proxy) # Pass application and proxy
+        self.auth_handlers = AuthHandlers(self.application, self.subscription_handlers, self.start_help_handlers, proxy=self.proxy) # Pass application and proxy
 
         # Group handlers
         self.group_handlers = GroupHandlers(self.application)
