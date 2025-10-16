@@ -263,6 +263,30 @@ class SubscriptionHandlers:
             )
 
     @admin_only
+    async def delete_subscription_requests_command(self, update: Update, context: CallbackContext):
+        """Delete all pending subscription requests from the database."""
+        chat_id = update.effective_chat.id
+
+        try:
+            conn = sqlite3.connect("data/user_statistics.sqlite")
+            cursor = conn.cursor()
+
+            cursor.execute("DELETE FROM subscription_requests")
+            conn.commit()
+            conn.close()
+
+            await context.bot.send_message(
+                chat_id=chat_id,
+                text="✅ تم حذف جميع طلبات الاشتراك بنجاح."
+            )
+        except Exception as e:
+            self.logger.error(f"Error deleting subscription requests: {str(e)}")
+            await context.bot.send_message(
+                chat_id=chat_id,
+                text=f"❌ حدث خطأ أثناء حذف طلبات الاشتراك: {str(e)}"
+            )
+
+    @admin_only
     @auto_channel_subscription_required
     async def add_user_command(self, update: Update, context: CallbackContext):
         """Add a user to subscription list. Format: /adduser USER_ID DAYS"""
