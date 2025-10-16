@@ -135,6 +135,8 @@ class AuthHandlers:
 
         # Add new command for creating session ID
         self.dispatcher.add_handler(CommandHandler("create_session_id", self.create_session_id_command))
+        self.dispatcher.add_handler(CommandHandler("account_commands", self.account_commands_handler))
+        self.dispatcher.add_handler(CallbackQueryHandler(self.account_commands_callback, pattern='^command_'))
 
     @subscription_required
     async def login_command(self, update: Update, context: CallbackContext):
@@ -925,6 +927,42 @@ class AuthHandlers:
         )
 
     @subscription_required
+    async def account_commands_handler(self, update: Update, context: CallbackContext):
+        """Display account-related commands as inline buttons"""
+        chat_id = update.effective_chat.id
+
+        keyboard = [
+            [InlineKeyboardButton("🔑 تسجيل الدخول", callback_data="command_login")],
+            [InlineKeyboardButton("📝 إنشاء جلسة", callback_data="command_generate_session")],
+            [InlineKeyboardButton("🚪 تسجيل الخروج", callback_data="command_logout")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        await context.bot.send_message(
+            chat_id=chat_id,
+            text="اختر إجراءً متعلقًا بالحساب:",
+            reply_markup=reply_markup
+        )
+        return ConversationHandler.END
+
+    async def account_commands_callback(self, update: Update, context: CallbackContext):
+        """Handle callback queries from account command buttons"""
+        query = update.callback_query
+        await query.answer()
+        command = query.data.replace("command_", "/")
+        
+        # Simulate command execution by calling the respective command handlers
+        # Need to pass the original update and context to the command handlers
+        if command == "/login":
+            # For /login, we need to call the login_command with the original update and context
+            # The login_command expects a CommandHandler entry point, so we need to simulate that
+            # by calling the method directly.
+            await self.login_command(update, context)
+        elif command == "/generate_session":
+            await self.generate_session_command(update, context)
+        elif command == "/logout":
+            await self.logout_command(update, context)
+
     async def create_session_id_command(self, update: Update, context: CallbackContext):
         """Create a session ID without logging in"""
         chat_id = update.effective_chat.id
