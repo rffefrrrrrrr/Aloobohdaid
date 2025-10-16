@@ -3,6 +3,7 @@ from datetime import datetime # Added missing import for datetime
 
 import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.constants import ParseMode
 from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler
 from services.subscription_service import SubscriptionService
 from config.config import ADMIN_USER_ID # Import ADMIN_USER_ID
@@ -28,16 +29,9 @@ except ImportError:
 
 logger = logging.getLogger(__name__) # Define logger
 
-# Helper function to escape MarkdownV2 characters
-def escape_markdown_v2(text: str) -> str:
-    if not isinstance(text, str): # Ensure input is a string
-        text = str(text)
-    # In MarkdownV2, characters _, *, [, ], (, ), ~, `, >, #, +, -, =, |, {, }, ., ! must be escaped
-    escape_chars = r'_*[]()~`>#+-=|{}.!'
-    # Escape characters one by one
-    for char in escape_chars:
-        text = text.replace(char, '\\' + char)
-    return text
+
+
+
 
 
 class StartHelpHandlers:
@@ -173,13 +167,15 @@ class StartHelpHandlers:
         if update.message:
              await update.message.reply_text(
                  text=welcome_text,
-                 reply_markup=reply_markup
+                 reply_markup=reply_markup,
+                 parse_mode=None
              )
         # Use edit_message_text for callbacks
         elif update.callback_query:
              await update.callback_query.edit_message_text(
                  text=welcome_text,
-                 reply_markup=reply_markup
+                 reply_markup=reply_markup,
+                 parse_mode=None
              )
 
     # Keep original help_command
@@ -689,8 +685,7 @@ class StartHelpHandlers:
                         await query.edit_message_text(
                             text=text,
                             reply_markup=reply_markup,
-                            parse_mode=parse_mode
-                        )
+                         parse_mode=None                        )
 
                 # إنشاء رسالة وهمية
                 update.message = DummyMessage(
@@ -815,36 +810,44 @@ class StartHelpHandlers:
         # Keep original start_usage_info logic
         elif data == "start_usage_info":
             # Show usage information
-            usage_text = (
-                "✨ \\*دليل تسجيل الدخول واستخدام البوت\\* ✨\n\n"
-                "للاستفادة من ميزات النشر التلقائي، يجب عليك تسجيل الدخول باستخدام Session String\\. اتبع الخطوات التالية بدقة:\n\n"
-                "1️⃣  \\*\\*الحصول على API ID و API Hash:\\*\\*\n"
-                "    \\*   اذهب إلى موقع [my\\.telegram\\.org](https://my.telegram.org)\\.\n"
-                "    \\*   سجل الدخول باستخدام رقم هاتفك\\.\n"
-                "    \\*   انقر على \"API development tools\" \\(أدوات تطوير API\\)\\.\n"
-                "    \\*   \\*\\*لتعبئة الحقول:\\*\\*\n"
-                "        \\*   `App title`: أدخل 7 أحرف \\(مثلاً: MyBot123\\)\\.\n"
-                "        \\*   `Short name`: أدخل 7 أحرف \\(مثلاً: MyBot456\\)\\.\n"
-                "        \\*   `Platform`: اختر `Desktop`\\.\n"
-                "        \\*   اترك الحقول الأخرى فارغة\\.\n"
-                "    \\*   اضغط على \"Create application\"\\.\n"
-                "    \\*   ستحصل على `App api_id` و `App api_hash`\\. احتفظ بهما بأمان\\.\n\n"
-                "2️⃣  \\*\\*توليد Session String:\\*\\*\n"
-                "    \\*   اذهب إلى أداة توليد Session String الآمنة: [telegram\\.tools/session\\-string\\-generator\\#telethon](https://telegram.tools/session-string-generator#telethon)\\.\n"
-                "    \\*   أدخل `App api_id` و `App api_hash` اللذين حصلت عليهما في الخطوة 1\\.\n"
-                "    \\*   أدخل رقم هاتفك \\(مع رمز الدولة\\) واضغط على \"Generate Session String\"\\.\n"
-                "    \\*   أدخل رمز التحقق الذي سيصلك على تيليجرام\\.\n"
-                "    \\*   ستحصل على سلسلة نصية طويلة هي الـ \\*\\*Session String\\*\\*\\.\n\n"
-                "3️⃣  \\*\\*تسجيل الدخول في البوت:\\*\\*\n"
-                "    \\*   اذهب إلى قائمة الأوامر في البوت واضغط على `/login`\\.\n"
-                "    \\*   الصق الـ \\*\\*Session String\\*\\* الذي حصلت عليه في الخطوة 2\\.\n\n"
-                "    \\*   سيقوم البوت بتسجيل الدخول إلى حسابك\\.\n\n"
-                "4️⃣  \\*\\*بدء الاستخدام:\\*\\*\n"
-                "    \\*   تأكد من أن لديك اشتراكاً نشطاً \\(راجع قائمة `/start`\\)\\.\n"
-                "    \\*   استخدم الأمر `/groups` لإدارة المجموعات\\.\n"
-                "    \\*   استخدم الأمر `/post` لبدء النشر التلقائي\\.\n\n"
-                "🚀 \\*جاهز للانطلاق؟\\* ابدأ بتسجيل الدخول الآن!"
+            usage_text_raw = (
+                "دليل تسجيل الدخول واستخدام البوت\n\n"
+                "للاستفادة من ميزات النشر التلقائي، يجب عليك تسجيل الدخول باستخدام Session String. اتبع الخطوات التالية بدقة:\n\n"
+                "1. الحصول على API ID و API Hash:\n"
+                "    •   اذهب إلى موقع my.telegram.org.\n"
+                "    •   سجل الدخول باستخدام رقم هاتفك.\n"
+                "    •   انقر على \"API development tools\" (أدوات تطوير API).\n"
+                "    •   لتعبئة الحقول:\n"
+                "        •   App title: أدخل 7 أحرف (مثلاً: MyBot123).\n"
+                "        •   Short name: أدخل 7 أحرف (مثلاً: MyBot456).\n"
+                "        •   Platform: اختر Desktop.\n"
+                "        •   اترك الحقول الأخرى فارغة.\n"
+                "    •   اضغط على \"Create application\".\n"
+                "    •   ستحصل على App api_id و App api_hash. احتفظ بهما بأمان.\n\n"
+                "2. توليد Session String:\n"
+                "    •   اذهب إلى أداة توليد Session String الآمنة: telegram.tools/session-string-generator#telethon.\n"
+                "    •   أدخل App api_id و App api_hash اللذين حصلت عليهما في الخطوة 1.\n"
+                "    •   أدخل رقم هاتفك (مع رمز الدولة) واضغط على \"Generate Session String\".\n"
+                "    •   أدخل رمز التحقق الذي سيصلك على تيليجرام.\n"
+                "    •   ستحصل على سلسلة نصية طويلة هي الـ Session String.\n\n"
+                "3. تسجيل الدخول في البوت:\n"
+                "    •   اذهب إلى قائمة الأوامر في البوت واضغط على /login.\n"
+                "    •   الصق الـ Session String الذي حصلت عليه في الخطوة 2.\n\n"
+                "    •   سيقوم البوت بتسجيل الدخول إلى حسابك.\n\n"
+                "4. بدء الاستخدام:\n"
+                "    •   تأكد من أن لديك اشتراكاً نشطاً (راجع قائمة /start).\n"
+                "    •   استخدم الأمر /groups لإدارة المجموعات.\n"
+                "    •   استخدم الأمر /post لبدء النشر التلقائي.\n\n"
+                "جاهز للانطلاق؟ ابدأ بتسجيل الدخول الآن!"
             )
+            usage_text = usage_text_raw.replace("✨ ", "").replace("🚀 ", "") # Remove emojis
+            usage_text = usage_text.replace("1️⃣  ", "1.  ").replace("2️⃣  ", "2.  ").replace("3️⃣  ", "3.  ").replace("4️⃣  ", "4.  ") # Replace numbered emojis with plain numbers
+            usage_text = usage_text.replace("<b>", "").replace("</b>", "") # Remove bold tags
+            usage_text = usage_text.replace("<i>", "").replace("</i>", "") # Remove italic tags
+            usage_text = usage_text.replace("<a href=", "").replace("</a>", "") # Remove link tags
+            usage_text = usage_text.replace("\"", "") # Remove escaped quotes
+            usage_text = usage_text.replace("(", "").replace(")", "") # Remove parentheses for links
+            usage_text = usage_text.replace("#telethon", "") # Remove anchor for link 
             
             keyboard = [
                 [InlineKeyboardButton("🔗 استخراج سيزن سترينج (أداة خارجية)", url="https://telegram.tools/session-string-generator#telethon")],
@@ -856,7 +859,7 @@ class StartHelpHandlers:
                 await query.edit_message_text(
                     text=usage_text,
                     reply_markup=reply_markup,
-                    parse_mode="Markdown",
+                    parse_mode=None,
                     disable_web_page_preview=True
                 )
             except Exception as e:
