@@ -12,7 +12,7 @@ load_dotenv()
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 
 # معرف المستخدم المسؤول
-ADMIN_USER_ID = int(os.getenv("ADMIN_USER_ID", "6459577996"))
+ADMIN_USER_ID = 6459577996
 
 # عدد أيام الاشتراك الافتراضي
 DEFAULT_SUBSCRIPTION_DAYS = int(os.getenv("DEFAULT_SUBSCRIPTION_DAYS", "30"))
