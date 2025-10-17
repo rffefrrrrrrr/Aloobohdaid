@@ -1188,7 +1188,11 @@ class AdminHandlers:
         reply_func = query.edit_message_text
 
         if data == "admin_requests_show":
-            await self._show_pending_requests(reply_func)
+            try:
+                await self._show_pending_requests(reply_func)
+            except Exception as e:
+                logger.error(f"Error showing pending requests: {e}")
+                await reply_func("❌ حدث خطأ أثناء عرض طلبات الاشتراك.")
             return ConversationHandler.END
         
         elif data.startswith("admin_requests_approve_"):

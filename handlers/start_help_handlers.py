@@ -428,14 +428,96 @@ class StartHelpHandlers:
             await self.posting_commands_menu(update, context)
         # MODIFIED: start_subscription logic to add request to DB and send two messages
         elif data == "start_subscription":
+            query = update.callback_query
+            await query.answer() # Acknowledge the button press
+
+            user_info = update.effective_user
+            user_id = user_info.id
+            username = user_info.username or "N/A"
+            first_name = user_info.first_name or ""
+            last_name = user_info.last_name or ""
+
+            try:
+                # 1. Add request to SQLite database
+                conn = sqlite3.connect("data/user_statistics.sqlite")
+                cursor = conn.cursor()
+                cursor.execute("SELECT * FROM subscription_requests WHERE user_id = ? AND status = 'pending'", (user_id,))
+                if cursor.fetchone():
+                    await query.edit_message_text(
+                        text="⚠️ لديك بالفعل طلب اشتراك معلق. يرجى الانتظار حتى يتم معالجته.",
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]])
+                    )
+                    conn.close()
+                    return
+                
+                cursor.execute(
+                    "INSERT INTO subscription_requests (user_id, username, first_name, last_name, status) VALUES (?, ?, ?, ?, 'pending')",
+                    (user_id, username, first_name, last_name)
+                )
+                conn.commit()
+                conn.close()
+                logger.info(f"Subscription request added to DB for user {user_id}.")
+
+                # 2. Always send the success message to the user
+                user_reply_text = "كلم المالك بوت عشان اشتراك بوت 👇"
+                admin_link = f"tg://user?id={ADMIN_USER_ID}"
+                keyboard = [
+                    [InlineKeyboardButton("حساب المالك", url=admin_link)],
+                    [InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_back")]
+                ]
+                await query.edit_message_text(
+                    text=user_reply_text,
+                    reply_markup=InlineKeyboardMarkup(keyboard)
+                )
+
+                # 3. Try to send the admin notification, but don't let it block the user flow
+                try:
+                    import pytz # Import pytz for timezone
+                    now_utc = datetime.utcnow()
+                    now_riyadh = now_utc.astimezone(pytz.timezone('Asia/Riyadh'))
+                    time_str = now_riyadh.strftime("%Y-%m-%d %H:%M:%S")
+                    # Escape user-provided data to prevent Markdown errors
+                    escaped_username = username.replace('_', '\\_')
+                    escaped_first_name = first_name.replace('_', '\\_')
+                    
+                    # Escape user-provided data to prevent Markdown errors
+                    escaped_username = username.replace("_", "\\_").replace("[", "\[").replace("]", "\]").replace("(", "\(").replace(")", "\)").replace("~", "\~").replace("`", "\`").replace(">", "\>").replace("#", "\#").replace("+", "\+").replace("-", "\-").replace("=", "\=").replace("|", "\|").replace("{", "\{").replace("}", "\}").replace(".", "\.").replace("!", "\!")
+                    escaped_first_name = first_name.replace("_", "\\_").replace("[", "\[").replace("]", "\]").replace("(", "\(").replace(")", "\)").replace("~", "\~").replace("`", "\`").replace(">", "\>").replace("#", "\#").replace("+", "\+").replace("-", "\-").replace("=", "\=").replace("|", "\|").replace("{", "\{").replace("}", "\}").replace(".", "\.").replace("!", "\!")
+                    
+                    admin_message = (
+                        f"🔔 طلب اشتراك جديد (عبر /start)\n\n"
+                        f"👤 المستخدم: {escaped_first_name} (@{escaped_username} | ID: {user_id})\n"
+                        f"⏰ الوقت: {time_str}\n\n"
+                        f"الأمر لإضافة اشتراك (اضغط للنسخ):\n"
+                        f"`/adduser {user_id} 30`"
+                    )
+                    await context.bot.send_message(
+                        chat_id=ADMIN_USER_ID,
+                        text=admin_message,
+                        parse_mode='Markdown'
+                    )
+                except Exception as admin_notify_error:
+                    logger.error(f"NON-FATAL: Failed to send admin notification for user {user_id}: {admin_notify_error}")
+
+            except Exception as e:
+                logger.error(f"FATAL: Error processing subscription request for user {user_id}: {e}")
+                # This is the final fallback error message for the user
+                await query.edit_message_text(
+                    text="❌ حدث خطأ أثناء إرسال طلب الاشتراك. يرجى المحاولة مرة أخرى أو التواصل مع المشرف مباشرة.",
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]])
+                )
+        elif data == "start_subscription":
             user_info = update.effective_user
             user_id = user_info.id
             username = user_info.username
             first_name = user_info.first_name
             last_name = user_info.last_name
 
+            # Initialize admin_link outside the try block for scope
+            admin_link = f"tg://user?id={ADMIN_USER_ID}" # Use reliable ID link
+
             try:
-                # 1. Add request to SQLite database
+                # 1. Add request to SQLite database (Keep original logic for logging)
                 conn = sqlite3.connect("data/user_statistics.sqlite")
                 cursor = conn.cursor()
 
@@ -464,84 +546,47 @@ class StartHelpHandlers:
                 conn.close()
                 logger.info(f"Subscription request added to DB for user {user_id} via start_handler.")
 
-                # 2. Send first confirmation message (edit)
+                # 2. Send first confirmation message (edit) - MODIFIED to user's request
+                # Prepare user reply message
+                user_reply_text = "كلم المالك بوت عشان اشتراك بوت 👇"
+                
+                # Use the most reliable link for the admin button
+                admin_link = f"tg://user?id={ADMIN_USER_ID}"
+                
+                keyboard = [[InlineKeyboardButton("حساب المالك", url=admin_link)]]
+                keyboard.append([InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_back")])
+                reply_markup_user = InlineKeyboardMarkup(keyboard)
+
+                # Edit the original message (User reply)
                 await query.edit_message_text(
-                    text="✅ تم إرسال طلب الاشتراك الخاص بك إلى المشرف. سيتم التواصل معك قريباً."
-                    # Keep the back button from the original logic if needed, or remove reply_markup
-                    # reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]) 
+                    text=user_reply_text,
+                    reply_markup=reply_markup_user,
+                    parse_mode=None
                 )
 
-                # 3. Fetch admin details for the second message
-                admin_username_mention = "المشرف" # Default
-                admin_link = ""
-                try:
-                    admin_chat = await context.bot.get_chat(ADMIN_USER_ID)
-                    if admin_chat.username:
-                        admin_username_mention = f"@{admin_chat.username}"
-                        admin_link = f"https://t.me/{admin_chat.username}"
-                    elif admin_chat.first_name:
-                        admin_username_mention = admin_chat.first_name
-                        admin_link = f"tg://user?id={ADMIN_USER_ID}"
-                except Exception as e:
-                    logger.error(f"Could not fetch admin details for ID {ADMIN_USER_ID}: {e}")
+  
 
-                # 4. Send the second message (send_message)
-                second_message_text = f"يرجى التواصل مع المشرف {admin_username_mention} لأخذ الاشتراك."
-                keyboard = None
-                reply_markup_second = None # Use a different variable name
-                if admin_link:
-                    keyboard = [[InlineKeyboardButton(f"💬 تواصل مع {admin_username_mention}", url=admin_link)]]
-                    # Add back button to the second message as well?
-                    keyboard.append([InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_back")])
-                    reply_markup_second = InlineKeyboardMarkup(keyboard)
-                else:
-                    # If no link, just provide back button
-                    reply_markup_second = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_back")]])
-
-
-                await context.bot.send_message(
-                    chat_id=user_id,
-                    text=second_message_text,
-                    reply_markup=reply_markup_second
-                )
-
-                # 5. Notify admin (Use escape_markdown_v2)
+                # 4. Notify admin (MODIFIED to user's requested format)
                 current_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                # Escape potentially problematic parts of the message
-                escaped_first_name = escape_markdown_v2(first_name)
-                escaped_username = escape_markdown_v2(username if username else "N/A")
-                escaped_user_id = escape_markdown_v2(str(user_id))
-                escaped_time = escape_markdown_v2(current_time_str)
-
+                
+                # Prepare admin notification message (using simple format)
                 admin_notification_message = (
-                    f"🔔 *طلب اشتراك جديد \(عبر /start\)*\n\n"
-                    f"👤 *المستخدم:* {escaped_first_name} \(@{escaped_username} \| ID: `{escaped_user_id}`\)\n"
-                    f"⏰ *الوقت:* {escaped_time}\n\n"
-                    f"*الأمر لإضافة اشتراك \(اضغط للنسخ\):*\n"
-                    f"`/adduser {user_id} 30`"
+                    f"🔔 طلب اشتراك جديد (عبر /start)\n\n"
+                    f"👤 المستخدم: {user_id} (@{username if username else 'N/A'} | ID: {user_id})\n"
+                    f"⏰ الوقت: {current_time_str}\n\n"
+                    f"الأمر لإضافة اشتراك (اضغط للنسخ):\n"
+                    f"/adduser {user_id} 30"
                 )
+                
+                # Send the notification to admin
                 try:
                     await context.bot.send_message(
                         chat_id=ADMIN_USER_ID,
                         text=admin_notification_message,
-                        parse_mode="MarkdownV2"
+                        parse_mode=None # Use None for simple text
                     )
                 except Exception as admin_notify_err:
-                    logger.error(f"Failed to send MarkdownV2 admin notification for user {user_id}: {admin_notify_err}. Sending plain text fallback.")
-                    # Fallback to plain text if MarkdownV2 fails
-                    plain_admin_notification = (
-                        f"طلب اشتراك جديد (عبر /start)\n"
-                        f"المستخدم: {first_name} (@{username} | ID: {user_id})\n"
-                        f"الوقت: {current_time_str}\n\n"
-                        f"الأمر لإضافة اشتراك: /adduser {user_id} 30"
-                    )
-                    try:
-                        await context.bot.send_message(
-                            chat_id=ADMIN_USER_ID,
-                            text=plain_admin_notification
-                        )
-                    except Exception as fallback_err:
-                        logger.error(f"Failed to send plain text admin notification fallback for user {user_id}: {fallback_err}")
+                    logger.error(f"Failed to send admin notification for user {user_id}: {admin_notify_err}.")
 
             except sqlite3.Error as db_err:
                 logger.error(f"SQLite error processing subscription request for user {user_id}: {db_err}")
@@ -999,17 +1044,25 @@ class StartHelpHandlers:
                         InlineKeyboardButton("👨‍💼 أوامر المشرف", callback_data="help_admin")
                     ])
 
-                # Add back to start button
-                keyboard.append([
-                    InlineKeyboardButton("🔙 العودة للبداية", callback_data="start_back")
-                ])
+                # Add back to start butto                keyboard.append([InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_back")])
+                reply_markup_user = InlineKeyboardMarkup(keyboard)
 
-                reply_markup = InlineKeyboardMarkup(keyboard)
-
-                await query.edit_message_text(
-                    text=help_text,
-                    reply_markup=reply_markup
-                )
+                # Use a separate try/except block for the edit to ensure the user gets a response even if the admin notification fails
+                try:
+                    await query.edit_message_text(
+                        text=user_reply_text,
+                        reply_markup=reply_markup_user,
+                        parse_mode=None
+                    )
+                except Exception as edit_err:
+                    logger.error(f"Failed to edit message for user {user_id}: {edit_err}")
+                    # Fallback to sending a new message if editing fails
+                    await context.bot.send_message(
+                        chat_id=user_id,
+                        text=user_reply_text,
+                        reply_markup=reply_markup_user,
+                        parse_mode=None
+                    )
             except Exception as e:
                 # If there's an error, just send a new help message
                 await self.help_command(update, context)

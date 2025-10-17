@@ -561,3 +561,39 @@ class SubscriptionService:
         except Exception as e:
             logger.error(f"Error deleting user subscription requests: {str(e)}")
             return False
+
+
+    def get_pending_requests(self):
+        """Get all pending subscription requests from SQLite."""
+        if not self.sqlite_db_path:
+            return []
+        try:
+            conn = sqlite3.connect(self.sqlite_db_path)
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM subscription_requests WHERE status = 'pending' ORDER BY request_time DESC")
+            requests = [dict(row) for row in cursor.fetchall()]
+            conn.close()
+            return requests
+        except Exception as e:
+            logger.error(f"Error fetching pending requests from SQLite: {e}")
+            return []
+
+
+    def update_subscription_request_status(self, request_id, status):
+        """Update the status of a subscription request in SQLite."""
+        if not self.sqlite_db_path:
+            return False, "SQLite database not initialized."
+        try:
+            conn = sqlite3.connect(self.sqlite_db_path)
+            cursor = conn.cursor()
+            cursor.execute("UPDATE subscription_requests SET status = ? WHERE id = ?", (status, request_id))
+            conn.commit()
+            conn.close()
+            if cursor.rowcount > 0:
+                return True, f"✅ تم تحديث حالة الطلب {request_id} إلى {status} بنجاح."
+            else:
+                return False, f"⚠️ لم يتم العثور على الطلب {request_id}."
+        except Exception as e:
+            logger.error(f"Error updating request status in SQLite: {e}")
+            return False, f"❌ حدث خطأ في تحديث حالة الطلب: {e}"
