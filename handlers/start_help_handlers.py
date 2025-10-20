@@ -230,71 +230,72 @@ class StartHelpHandlers:
                 reply_markup=reply_markup
             )
 
-        async def api_info_command(self, update: Update, context: CallbackContext, from_callback=False):
-         """Handle the /api_info command to show API session status."""
-         info_message = (
-             "ℹ️ *معلومات حول API ID و API Hash:*\n\n"
-             "للاستفادة من بعض ميزات البوت المتقدمة \\(مثل تسجيل الدخول بحسابك الخاص\\)، ستحتاج إلى `API ID` و `API Hash` الخاصين بك من تيليجرام\\.\n\n"
-             "*كيفية الحصول عليها:*\n"
-             "1\\. اذهب إلى موقع تيليجرام الرسمي لإدارة التطبيقات: [https://my\\.telegram\\.org/apps](https://my.telegram.org/apps)\n"
-             "2\\. قم بتسجيل الدخول باستخدام رقم هاتفك\\.\n"
-             "3\\. املأ نموذج 'Create New Application' \\(يمكنك إدخال أي اسم ووصف قصير، مثل 'MyBotApp'\\)\\.\n"
-             "4\\. بعد إنشاء التطبيق، ستظهر لك قيم `api_id` و `api_hash`\\. احتفظ بها في مكان آمن ولا تشاركها مع أحد\\.\n\n"
-         )
+    async def api_info_command(self, update: Update, context: CallbackContext, from_callback=False):
+        """Handle the /api_info command to show API session status."""
+        info_message = (
+            "ℹ️ *معلومات حول API ID و API Hash:*\n\n"
+            "للاستفادة من بعض ميزات البوت المتقدمة \\(مثل تسجيل الدخول بحسابك الخاص\\)، ستحتاج إلى `API ID` و `API Hash` الخاصين بك من تيليجرام\\.\n\n"
+            "*كيفية الحصول عليها:*\n"
+            "1\\. اذهب إلى موقع تيليجرام الرسمي لإدارة التطبيقات: [https://my\\.telegram\\.org/apps](https://my.telegram.org/apps)\n"
+            "2\\. قم بتسجيل الدخول باستخدام رقم هاتفك\\.\n"
+            "3\\. املأ نموذج \\\\'Create New Application\\\\\' \\(يمكنك إدخال أي اسم ووصف قصير، مثل \\\\'MyBotApp\\\\\'\\)\\.\n"
+            "4\\. بعد إنشاء التطبيق، ستظهر لك قيم `api_id` و `api_hash`\\. احتفظ بها في مكان آمن ولا تشاركها مع أحد\\.\n\n"
+        )
 
-         if self.auth_service is not None:
-             info_message += "\\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل `/login` أو `/generate_session`\\."
-         else:
-             info_message += "\\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت\\."
+        if self.auth_service is not None:
+            info_message += "\\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل `/login` أو `/generate_session`\\."
+        else:
+            info_message += "\\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت\\."
 
-             keyboard = [[InlineKeyboardButton("🔙 رجوع", callback_data="help_account")]]
-             reply_markup = InlineKeyboardMarkup(keyboard)
+        keyboard = [[InlineKeyboardButton("🔙 رجوع", callback_data="help_account")]]
+        reply_markup = InlineKeyboardMarkup(keyboard)
 
-             if from_callback and update.callback_query:
-                 try:
-                     await update.callback_query.edit_message_text(
-                         text=info_message,
-                         reply_markup=reply_markup,
-                         parse_mode=\'MarkdownV2\',
-                         disable_web_page_preview=True
-                     )
-                 except Exception as md_e:
-                     logger.warning(f"Failed to edit api_info with MarkdownV2: {md_e}. Falling back to plain text.")
-                     plain_info_message = (
-                         "ℹ️ معلومات حول API ID و API Hash:\n\n"
-                         "للاستفادة من بعض ميزات البوت المتقدمة (مثل تسجيل الدخول بحسابك الخاص)، ستحتاج إلى API ID و API Hash الخاصين بك من تيليجرام.\n\n"
-                         "كيفية الحصول عليها:\n"
-                         "1. اذهب إلى موقع تيليجرام الرسمي لإدارة التطبيقات: https://my.telegram.org/apps\n"
-                         "2. قم بتسجيل الدخول باستخدام رقم هاتفك.\n"
-                         "3. املأ نموذج \'Create New Application\' (يمكنك إدخال أي اسم ووصف قصير، مثل \'MyBotApp\').\n"
-                         "4. بعد إنشاء التطبيق، ستظهر لك قيم api_id و api_hash. احتفظ بها في مكان آمن ولا تشاركها مع أحد.\n\n"
-                     )
-                     if self.auth_service is not None:
-                         plain_info_message += "\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل /login أو /generate_session."
-                     else:
-                         plain_info_message += "\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت."
-                     await update.callback_query.edit_message_text(text=plain_info_message, reply_markup=reply_markup)
-             else:
-                 try:
-                     await update.message.reply_text(text=info_message, parse_mode=\'MarkdownV2\',
-                         disable_web_page_preview=True
-                     )
-                 except Exception as md_e:
-                     logger.warning(f"Failed to send api_info with MarkdownV2: {md_e}. Falling back to plain text.")
-                     plain_info_message = (
-                         "ℹ️ معلومات حول API ID و API Hash:\n\n"
-                         "للاستفادة من بعض ميزات البوت المتقدمة (مثل تسجيل الدخول بحسابك الخاص)، ستحتاج إلى API ID و API Hash الخاصين بك من تيليجرام.\n\n"
-                         "كيفية الحصول عليها:\n"
-                         "1. اذهب إلى موقع تيليجرام الرسمي لإدارة التطبيقات: https://my.telegram.org/apps\n"
-                         "2. قم بتسجيل الدخول باستخدام رقم هاتفك.\n"
-                         "3. املأ نموذج \'Create New Application\' (يمكنك إدخال أي اسم ووصف قصير، مثل \'MyBotApp\').\n"
-                         "4. بعد إنشاء التطبيق، ستظهر لك قيم api_id و api_hash. احتفظ بها في مكان آمن ولا تشاركها مع أحد.\n\n"
-                     )
-                     if self.auth_service is not None:
-                         plain_info_message += "\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل /login أو /generate_session."
-                     else:
-                         plain_info_message += "\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت."
-                     await update.message.reply_text(text=plain_info_message)original start_help_callback structure, MODIFY start_referral and help_referrals logic
+        if from_callback and update.callback_query:
+            try:
+                await update.callback_query.edit_message_text(
+                    text=info_message,
+                    reply_markup=reply_markup,
+                    parse_mode=\'MarkdownV2\',
+                    disable_web_page_preview=True
+                )
+            except Exception as md_e:
+                logger.warning(f"Failed to edit api_info with MarkdownV2: {md_e}. Falling back to plain text.")
+                plain_info_message = (
+                    "ℹ️ معلومات حول API ID و API Hash:\n\n"
+                    "للاستفادة من بعض ميزات البوت المتقدمة (مثل تسجيل الدخول بحسابك الخاص)، ستحتاج إلى API ID و API Hash الخاصين بك من تيليجرام.\n\n"
+                    "كيفية الحصول عليها:\n"
+                    "1. اذهب إلى موقع تيليجرام الرسمي لإدارة التطبيقات: https://my.telegram.org/apps\n"
+                    "2. قم بتسجيل الدخول باستخدام رقم هاتفك.\n"
+                    "3. املأ نموذج \'Create New Application\' (يمكنك إدخال أي اسم ووصف قصير، مثل \'MyBotApp\').\n"
+                    "4. بعد إنشاء التطبيق، ستظهر لك قيم api_id و api_hash. احتفظ بها في مكان آمن ولا تشاركها مع أحد.\n\n"
+                )
+                if self.auth_service is not None:
+                    plain_info_message += "\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل /login أو /generate_session."
+                else:
+                    plain_info_message += "\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت."
+                await update.callback_query.edit_message_text(text=plain_info_message, reply_markup=reply_markup)
+        else:
+            try:
+                await update.message.reply_text(text=info_message, parse_mode=\'MarkdownV2\',
+                    disable_web_page_preview=True
+                )
+            except Exception as md_e:
+                logger.warning(f"Failed to send api_info with MarkdownV2: {md_e}. Falling back to plain text.")
+                plain_info_message = (
+                    "ℹ️ معلومات حول API ID و API Hash:\n\n"
+                    "للاستفادة من بعض ميزات البوت المتقدمة (مثل تسجيل الدخول بحسابك الخاص)، ستحتاج إلى API ID و API Hash الخاصين بك من تيليجرام.\n\n"
+                    "كيفية الحصول عليها:\n"
+                    "1. اذهب إلى موقع تيليجرام الرسمي لإدارة التطبيقات: https://my.telegram.org/apps\n"
+                    "2. قم بتسجيل الدخول باستخدام رقم هاتفك.\n"
+                    "3. املأ نموذج \'Create New Application\' (يمكنك إدخال أي اسم ووصف قصير، مثل \'MyBotApp\').\n"
+                    "4. بعد إنشاء التطبيق، ستظهر لك قيم api_id و api_hash. احتفظ بها في مكان آمن ولا تشاركها مع أحد.\n\n"
+                )
+                if self.auth_service is not None:
+                    plain_info_message += "\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل /login أو /generate_session."
+                else:
+                    plain_info_message += "\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت."
+                await update.message.reply_text(text=plain_info_message)
+
     async def start_help_callback(self, update: Update, context: CallbackContext):
         """Handle start and help related callbacks"""
         query = update.callback_query
