@@ -63,7 +63,7 @@ class StartHelpHandlers:
         self.dispatcher.add_handler(CommandHandler("api_info", self.api_info_command)) # Keep api_info command handler
 
         # Register callback queries - MODIFIED: Add referral_ pattern
-        self.dispatcher.add_handler(CallbackQueryHandler(self.start_help_callback, pattern=r'^(start_|help_|referral_|main_)')) # Add main_ pattern for new buttons
+        self.dispatcher.add_handler(CallbackQueryHandler(self.start_help_callback, pattern=r'^(start_|help_|referral_)')) # Use raw string and add referral_
 
     # Keep original start_command
     async def start_command(self, update: Update, context: CallbackContext):
@@ -154,23 +154,6 @@ class StartHelpHandlers:
             InlineKeyboardButton("ℹ️ معلومات الاستخدام", callback_data="start_usage_info")
         ])
 
-        # Add new command buttons
-        keyboard.append([
-            InlineKeyboardButton("💳 حالة الاشتراك", callback_data="main_subscription")
-        ])
-        keyboard.append([
-            InlineKeyboardButton("🔑 تسجيل الدخول", callback_data="main_login")
-        ])
-        keyboard.append([
-            InlineKeyboardButton("🚪 تسجيل الخروج", callback_data="main_logout")
-        ])
-        keyboard.append([
-            InlineKeyboardButton("⚙️ توليد Session", callback_data="main_generate_session")
-        ])
-        keyboard.append([
-            InlineKeyboardButton("ℹ️ معلومات API", callback_data="main_api_info")
-        ])
-
         # Add Posting Commands button
         keyboard.append([
             InlineKeyboardButton("📝 أوامر النشر", callback_data="start_posting_commands")
@@ -247,13 +230,7 @@ class StartHelpHandlers:
                 reply_markup=reply_markup
             )
 
-    async def handle_api_info_request(self, update: Update, context: CallbackContext):
-         """Handle the /api_info command or callback to show API session status."""
-         # Acknowledge the callback query if it came from a button press
-         if update.callback_query:
-             await update.callback_query.answer()
-
-
+    async def api_info_command(self, update: Update, context: CallbackContext):
          """Handle the /api_info command to show API session status."""
          info_message = (
              "ℹ️ *معلومات حول API ID و API Hash:*\n\n"
@@ -449,21 +426,6 @@ class StartHelpHandlers:
 
         elif data == "start_posting_commands":
             await self.posting_commands_menu(update, context)
-
-        elif data == "main_subscription":
-            await self.handle_subscription_status(update, context)
-
-        elif data == "main_login":
-            await self.handle_login_request(update, context)
-
-        elif data == "main_logout":
-            await self.handle_logout_request(update, context)
-
-        elif data == "main_generate_session":
-            await self.handle_generate_session_request(update, context)
-
-        elif data == "main_api_info":
-            await self.handle_api_info_request(update, context)
         # MODIFIED: start_subscription logic to add request to DB and send two messages
         elif data == "start_subscription":
             user_info = update.effective_user
@@ -1129,59 +1091,4 @@ class StartHelpHandlers:
                 logger.error(f"Error editing message in help_back_to_start: {e}") # Use logger
                 # Fallback: maybe send a new message if edit fails? Or just log.
                 # For now, just log the error.
-
-
-
-
-    async def handle_subscription_status(self, update: Update, context: CallbackContext):
-        query = update.callback_query
-        await query.answer()
-        user_id = update.effective_user.id
-
-        db_user = self.subscription_service.get_user(user_id)
-        if not db_user:
-            message_text = "⚠️ لم يتم العثور على معلومات اشتراك لك. يرجى البدء باستخدام /start."
-        else:
-            has_subscription = db_user.has_active_subscription()
-            if has_subscription:
-                if db_user.subscription_end:
-                    end_date = db_user.subscription_end.strftime("%Y-%m-%d %H:%M:%S")
-                    message_text = f"✅ لديك اشتراك نشط ينتهي في: {end_date}"
-                else:
-                    message_text = "✅ لديك اشتراك نشط غير محدود المدة."
-            else:
-                message_text = "❌ ليس لديك اشتراك نشط."
-
-        keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]
-        reply_markup = InlineKeyboardMarkup(keyboard)
-        await query.edit_message_text(text=message_text, reply_markup=reply_markup)
-
-    async def handle_login_request(self, update: Update, context: CallbackContext):
-        query = update.callback_query
-        await query.answer()
-        message_text = "لتسجيل الدخول، يرجى إرسال Session String الخاص بك."
-        keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]
-        reply_markup = InlineKeyboardMarkup(keyboard)
-        await query.edit_message_text(text=message_text, reply_markup=reply_markup)
-
-    async def handle_logout_request(self, update: Update, context: CallbackContext):
-        query = update.callback_query
-        await query.answer()
-        user_id = update.effective_user.id
-        if self.auth_service is not None:
-            self.auth_service.logout_user(user_id)
-            message_text = "✅ تم تسجيل الخروج بنجاح."
-        else:
-            message_text = "⚠️ خدمة المصادقة غير مفعلة."
-        keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]
-        reply_markup = InlineKeyboardMarkup(keyboard)
-        await query.edit_message_text(text=message_text, reply_markup=reply_markup)
-
-    async def handle_generate_session_request(self, update: Update, context: CallbackContext):
-        query = update.callback_query
-        await query.answer()
-        message_text = "لتوليد Session String جديد، يرجى اتباع التعليمات في قسم معلومات API."
-        keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]
-        reply_markup = InlineKeyboardMarkup(keyboard)
-        await query.edit_message_text(text=message_text, reply_markup=reply_markup)
 
