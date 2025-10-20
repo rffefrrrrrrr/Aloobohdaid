@@ -230,7 +230,7 @@ class StartHelpHandlers:
                 reply_markup=reply_markup
             )
 
-         async def api_info_command(self, update: Update, context: CallbackContext, from_callback=False):
+        async def api_info_command(self, update: Update, context: CallbackContext, from_callback=False):
          """Handle the /api_info command to show API session status."""
          info_message = (
              "ℹ️ *معلومات حول API ID و API Hash:*\n\n"
@@ -245,7 +245,9 @@ class StartHelpHandlers:
          if self.auth_service is not None:
              info_message += "\\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل `/login` أو `/generate_session`\\."
          else:
-             info_message += "\\n⚠️ ملاحظة: خدمة المصادقة با             keyboard = [[InlineKeyboardButton("🔙 رجوع", callback_data="help_account")]]
+             info_message += "\\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت\\."
+
+             keyboard = [[InlineKeyboardButton("🔙 رجوع", callback_data="help_account")]]
              reply_markup = InlineKeyboardMarkup(keyboard)
 
              if from_callback and update.callback_query:
@@ -253,7 +255,8 @@ class StartHelpHandlers:
                      await update.callback_query.edit_message_text(
                          text=info_message,
                          reply_markup=reply_markup,
-                         parse_mode=\'MarkdownV2\
+                         parse_mode=\'MarkdownV2\',
+                         disable_web_page_preview=True
                      )
                  except Exception as md_e:
                      logger.warning(f"Failed to edit api_info with MarkdownV2: {md_e}. Falling back to plain text.")
@@ -273,7 +276,8 @@ class StartHelpHandlers:
                      await update.callback_query.edit_message_text(text=plain_info_message, reply_markup=reply_markup)
              else:
                  try:
-                     await update.message.reply_text(text=info_message, parse_mode=\'MarkdownV2\
+                     await update.message.reply_text(text=info_message, parse_mode=\'MarkdownV2\',
+                         disable_web_page_preview=True
                      )
                  except Exception as md_e:
                      logger.warning(f"Failed to send api_info with MarkdownV2: {md_e}. Falling back to plain text.")
