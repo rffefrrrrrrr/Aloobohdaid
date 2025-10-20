@@ -230,7 +230,7 @@ class StartHelpHandlers:
                 reply_markup=reply_markup
             )
 
-    async def api_info_command(self, update: Update, context: CallbackContext):
+         async def api_info_command(self, update: Update, context: CallbackContext, from_callback=False):
          """Handle the /api_info command to show API session status."""
          info_message = (
              "ℹ️ *معلومات حول API ID و API Hash:*\n\n"
@@ -245,31 +245,52 @@ class StartHelpHandlers:
          if self.auth_service is not None:
              info_message += "\\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل `/login` أو `/generate_session`\\."
          else:
-             info_message += "\\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت\\."
+             info_message += "\\n⚠️ ملاحظة: خدمة المصادقة با             keyboard = [[InlineKeyboardButton("🔙 رجوع", callback_data="help_account")]]
+             reply_markup = InlineKeyboardMarkup(keyboard)
 
-         # Send the informational message using MarkdownV2 for the link
-         # Ensure the bot has permissions to send messages with MarkdownV2
-         try:
-             await update.message.reply_text(text=info_message, parse_mode='MarkdownV2', disable_web_page_preview=True)
-         except Exception as md_e:
-             logger.warning(f"Failed to send api_info with MarkdownV2: {md_e}. Falling back to plain text.")
-             # Fallback to plain text if MarkdownV2 fails
-             plain_info_message = (
-                 "ℹ️ معلومات حول API ID و API Hash:\n\n"
-                 "للاستفادة من بعض ميزات البوت المتقدمة (مثل تسجيل الدخول بحسابك الخاص)، ستحتاج إلى API ID و API Hash الخاصين بك من تيليجرام.\n\n"
-                 "كيفية الحصول عليها:\n"
-                 "1. اذهب إلى موقع تيليجرام الرسمي لإدارة التطبيقات: https://my.telegram.org/apps\n"
-                 "2. قم بتسجيل الدخول باستخدام رقم هاتفك.\n"
-                 "3. املأ نموذج 'Create New Application' (يمكنك إدخال أي اسم ووصف قصير، مثل 'MyBotApp').\n"
-                 "4. بعد إنشاء التطبيق، ستظهر لك قيم api_id و api_hash. احتفظ بها في مكان آمن ولا تشاركها مع أحد.\n\n"
-             )
-             if self.auth_service is not None:
-                 plain_info_message += "\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل /login أو /generate_session."
+             if from_callback and update.callback_query:
+                 try:
+                     await update.callback_query.edit_message_text(
+                         text=info_message,
+                         reply_markup=reply_markup,
+                         parse_mode=\'MarkdownV2\
+                     )
+                 except Exception as md_e:
+                     logger.warning(f"Failed to edit api_info with MarkdownV2: {md_e}. Falling back to plain text.")
+                     plain_info_message = (
+                         "ℹ️ معلومات حول API ID و API Hash:\n\n"
+                         "للاستفادة من بعض ميزات البوت المتقدمة (مثل تسجيل الدخول بحسابك الخاص)، ستحتاج إلى API ID و API Hash الخاصين بك من تيليجرام.\n\n"
+                         "كيفية الحصول عليها:\n"
+                         "1. اذهب إلى موقع تيليجرام الرسمي لإدارة التطبيقات: https://my.telegram.org/apps\n"
+                         "2. قم بتسجيل الدخول باستخدام رقم هاتفك.\n"
+                         "3. املأ نموذج \'Create New Application\' (يمكنك إدخال أي اسم ووصف قصير، مثل \'MyBotApp\').\n"
+                         "4. بعد إنشاء التطبيق، ستظهر لك قيم api_id و api_hash. احتفظ بها في مكان آمن ولا تشاركها مع أحد.\n\n"
+                     )
+                     if self.auth_service is not None:
+                         plain_info_message += "\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل /login أو /generate_session."
+                     else:
+                         plain_info_message += "\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت."
+                     await update.callback_query.edit_message_text(text=plain_info_message, reply_markup=reply_markup)
              else:
-                 plain_info_message += "\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت."
-             await update.message.reply_text(text=plain_info_message, disable_web_page_preview=True)
-
-    # Keep original start_help_callback structure, MODIFY start_referral and help_referrals logic
+                 try:
+                     await update.message.reply_text(text=info_message, parse_mode=\'MarkdownV2\
+                     )
+                 except Exception as md_e:
+                     logger.warning(f"Failed to send api_info with MarkdownV2: {md_e}. Falling back to plain text.")
+                     plain_info_message = (
+                         "ℹ️ معلومات حول API ID و API Hash:\n\n"
+                         "للاستفادة من بعض ميزات البوت المتقدمة (مثل تسجيل الدخول بحسابك الخاص)، ستحتاج إلى API ID و API Hash الخاصين بك من تيليجرام.\n\n"
+                         "كيفية الحصول عليها:\n"
+                         "1. اذهب إلى موقع تيليجرام الرسمي لإدارة التطبيقات: https://my.telegram.org/apps\n"
+                         "2. قم بتسجيل الدخول باستخدام رقم هاتفك.\n"
+                         "3. املأ نموذج \'Create New Application\' (يمكنك إدخال أي اسم ووصف قصير، مثل \'MyBotApp\').\n"
+                         "4. بعد إنشاء التطبيق، ستظهر لك قيم api_id و api_hash. احتفظ بها في مكان آمن ولا تشاركها مع أحد.\n\n"
+                     )
+                     if self.auth_service is not None:
+                         plain_info_message += "\n✅ يدعم هذا البوت تسجيل الدخول باستخدام هذه البيانات عبر الأوامر مثل /login أو /generate_session."
+                     else:
+                         plain_info_message += "\n⚠️ ملاحظة: خدمة المصادقة باستخدام API غير مفعلة حاليًا في هذا البوت."
+                     await update.message.reply_text(text=plain_info_message)original start_help_callback structure, MODIFY start_referral and help_referrals logic
     async def start_help_callback(self, update: Update, context: CallbackContext):
         """Handle start and help related callbacks"""
         query = update.callback_query
@@ -873,23 +894,53 @@ class StartHelpHandlers:
         # Keep original help_account logic
         elif data == "help_account":
             # Show account commands
-            message = "🔑 أوامر الحساب:\n\n"
-            message += "🔹 /subscription - التحقق من حالة الاشتراك\n"
-            message += "🔹 /login - تسجيل الدخول إلى حساب التيليجرام\n"
-            message += "🔹 /logout - تسجيل الخروج من حساب التيليجرام\n"
-            message += "🔹 /generate_session - توليد Session String جديد\n"
-            message += "🔹 /api_info - معلومات حول كيفية الحصول على API ID و API Hash\n"
-
-            # Create back button
-            keyboard = [
+            account_text = "🔑 أوامر الحساب:\n\nالرجاء اختيار الإجراء المطلوب:\n"
+            account_keyboard = [
+                [InlineKeyboardButton("🔹 حالة الاشتراك", callback_data="account_subscription")],
+                [InlineKeyboardButton("🔹 تسجيل الدخول", callback_data="account_login")],
+                [InlineKeyboardButton("🔹 تسجيل الخروج", callback_data="account_logout")],
+                [InlineKeyboardButton("🔹 توليد Session String", callback_data="account_generate_session")],
+                [InlineKeyboardButton("🔹 معلومات API ID و Hash", callback_data="account_api_info")],
                 [InlineKeyboardButton("🔙 رجوع", callback_data="help_back")]
             ]
-            reply_markup = InlineKeyboardMarkup(keyboard)
+            account_reply_markup = InlineKeyboardMarkup(account_keyboard)
 
             await query.edit_message_text(
-                text=message,
-                reply_markup=reply_markup
+                text=account_text,
+                reply_markup=account_reply_markup
             )
+
+        # Handlers for new account inline buttons
+        elif data == "account_subscription":
+            message = "🔑 *حالة الاشتراك*\n\n"
+            message += "للتحقق من حالة اشتراكك، يرجى استخدام الأمر `/subscription` مباشرة.\n"
+            keyboard = [[InlineKeyboardButton("🔙 رجوع", callback_data="help_account")]]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await query.edit_message_text(text=message, reply_markup=reply_markup, parse_mode="Markdown")
+
+        elif data == "account_login":
+            message = "🔑 *تسجيل الدخول*\n\n"
+            message += "لتسجيل الدخول إلى حساب تيليجرام الخاص بك، يرجى استخدام الأمر `/login` مباشرة.\n"
+            keyboard = [[InlineKeyboardButton("🔙 رجوع", callback_data="help_account")]]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await query.edit_message_text(text=message, reply_markup=reply_markup, parse_mode="Markdown")
+
+        elif data == "account_logout":
+            message = "🔑 *تسجيل الخروج*\n\n"
+            message += "لتسجيل الخروج من حساب تيليجرام الخاص بك، يرجى استخدام الأمر `/logout` مباشرة.\n"
+            keyboard = [[InlineKeyboardButton("🔙 رجوع", callback_data="help_account")]]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await query.edit_message_text(text=message, reply_markup=reply_markup, parse_mode="Markdown")
+
+        elif data == "account_generate_session":
+            message = "🔑 *توليد Session String*\n\n"
+            message += "لتوليد Session String جديد، يرجى استخدام الأمر `/generate_session` مباشرة.\n"
+            keyboard = [[InlineKeyboardButton("🔙 رجوع", callback_data="help_account")]]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await query.edit_message_text(text=message, reply_markup=reply_markup, parse_mode="Markdown")
+
+        elif data == "account_api_info":
+            await self.api_info_command(update, context, from_callback=True)
 
         # Keep original help_groups logic
         elif data == "help_groups":
