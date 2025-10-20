@@ -276,7 +276,7 @@ class StartHelpHandlers:
                 await update.callback_query.edit_message_text(text=plain_info_message, reply_markup=reply_markup)
         else:
             try:
-                await update.message.reply_text(text=info_message, parse_mode=\'MarkdownV2\',
+                await update.message.reply_text(text=info_message, parse_mode="MarkdownV2",
                     disable_web_page_preview=True
                 )
             except Exception as md_e:
