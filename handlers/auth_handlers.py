@@ -160,7 +160,7 @@ class AuthHandlers:
         # Create keyboard with login options
         keyboard = [
             [
-                InlineKeyboardButton("🔑 تسجيل الدخول بـ API", callback_data="auth_api"),
+
                 InlineKeyboardButton("📝 تسجيل الدخول بـ Session", callback_data="auth_session")
             ],
             [
@@ -236,7 +236,7 @@ class AuthHandlers:
         # Create keyboard with login options
         keyboard = [
             [
-                InlineKeyboardButton("🔑 تسجيل الدخول بـ API", callback_data="auth_api"),
+
                 InlineKeyboardButton("📝 تسجيل الدخول بـ Session", callback_data="auth_session")
             ]
         ]
